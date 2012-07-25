@@ -205,6 +205,16 @@
         	android:focusable="false" 
         	android:focusableInTouchMode="false"
             android:inputType="number" />
+
+        <TextView
+            android:id="@+id/credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="46dp"
+            android:layout_toRightOf="@+id/calc_go"
+            android:text="@string/credits"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </RelativeLayout>
 

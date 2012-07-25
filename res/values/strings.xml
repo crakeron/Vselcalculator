@@ -8,5 +8,8 @@
     <string name="calc">Calculate!</string>
     <string name="mhz">MHz</string>
     <string name="voltage">Recommended Voltage</string>
+    <string name="credits">Credits: ppero196, crakeron</string>
+    <string name="spinner">Number of frequencies</string>
+    <string name="welcome">Welcome to Vsel Calculator</string>
 
 </resources>
