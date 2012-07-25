@@ -14,9 +14,11 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+        public static final int Title=0x7f050013;
         public static final int arrow1=0x7f050003;
         public static final int arrow2=0x7f05000e;
         public static final int arrow3=0x7f05000d;
+        public static final int calc=0x7f050020;
         public static final int calc_go=0x7f050004;
         public static final int column1=0x7f05000f;
         public static final int column2=0x7f05000c;
@@ -24,15 +26,24 @@ public final class R {
         public static final int editText1=0x7f050000;
         public static final int editText2=0x7f050001;
         public static final int editText3=0x7f050002;
+        public static final int freq1=0x7f050016;
+        public static final int freq2=0x7f050017;
+        public static final int freq3=0x7f05001a;
+        public static final int freq4=0x7f05001d;
         public static final int mhz1=0x7f050008;
         public static final int mhz2=0x7f050009;
         public static final int mhz3=0x7f05000a;
         public static final int spinner1=0x7f050014;
-        public static final int textView1=0x7f050013;
         public static final int textView2=0x7f050005;
         public static final int textView3=0x7f050006;
         public static final int textView4=0x7f050007;
-        public static final int textView5=0x7f050015;
+        public static final int textView6=0x7f050019;
+        public static final int textView7=0x7f05001b;
+        public static final int textView8=0x7f05001f;
+        public static final int volt1=0x7f050015;
+        public static final int volt2=0x7f050018;
+        public static final int volt3=0x7f05001c;
+        public static final int volt4=0x7f05001e;
         public static final int voltage1=0x7f05000b;
         public static final int voltage2=0x7f050011;
         public static final int voltage3=0x7f050010;
