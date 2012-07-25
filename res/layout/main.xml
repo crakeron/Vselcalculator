@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="35dp"
+            android:ems="10"
+            android:inputType="number" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText1"
+            android:layout_alignRight="@+id/editText1"
+            android:layout_below="@+id/editText1"
+            android:layout_marginTop="43dp"
+            android:ems="10"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_alignRight="@+id/editText2"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editText1"
+            android:layout_alignBottom="@+id/editText1"
+            android:layout_centerHorizontal="true"
+            android:text="@string/arrow"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/calc_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText3"
+            android:layout_marginTop="33dp"
+            android:layout_toRightOf="@+id/editText3"
+            android:text="@string/calc" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText1"
+            android:layout_below="@+id/editText1"
+            android:layout_toLeftOf="@+id/calc_go"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Vsel1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_alignRight="@+id/editText2"
+            android:layout_below="@+id/editText2"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Vsel2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText3"
+            android:layout_alignRight="@+id/editText3"
+            android:layout_below="@+id/editText3"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Vsel3"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/mhz1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editText1"
+            android:layout_alignBottom="@+id/editText1"
+            android:layout_toRightOf="@+id/editText1"
+            android:text="@string/mhz"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/mhz2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editText2"
+            android:layout_alignBottom="@+id/editText2"
+            
+            android:layout_toRightOf="@+id/editText2"
+            android:text="@string/mhz"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/mhz3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editText3"
+            android:layout_alignBottom="@+id/editText3"
+            android:layout_alignRight="@+id/mhz1"
+            android:text="@string/mhz"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/voltage1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editText1"
+            android:layout_toRightOf="@+id/calc_go"
+            android:ems="10"
+            android:clickable="false" 
+         	android:cursorVisible="false" 
+        	android:focusable="false" 
+        	android:focusableInTouchMode="false"
+            android:inputType="number" />
+        
+
+        <TextView
+            android:id="@+id/column2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/voltage"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/arrow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mhz3"
+            android:layout_alignBottom="@+id/mhz3"
+            android:layout_alignLeft="@+id/arrow1"
+            android:text="@string/arrow"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/arrow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mhz2"
+            android:layout_alignBottom="@+id/mhz2"
+            android:layout_alignLeft="@+id/arrow1"
+            android:text="@string/arrow"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/column1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText1"
+            android:layout_alignParentTop="true"
+            android:text="@string/Column1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/voltage3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/arrow3"
+            android:layout_alignBottom="@+id/arrow3"
+            android:layout_alignLeft="@+id/voltage1"
+            android:ems="10"
+            android:clickable="false" 
+         	android:cursorVisible="false" 
+        	android:focusable="false" 
+        	android:focusableInTouchMode="false"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/voltage2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/arrow2"
+            android:layout_alignBottom="@+id/arrow2"
+            android:layout_alignLeft="@+id/voltage1"
+            android:ems="10"
+            android:clickable="false" 
+         	android:cursorVisible="false" 
+        	android:focusable="false" 
+        	android:focusableInTouchMode="false"
+            android:inputType="number" />
+
+    </RelativeLayout>
+
+</LinearLayout>

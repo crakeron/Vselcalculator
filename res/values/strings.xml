@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="Column1">CPU freq</string>
+    <string name="app_name">Vsel calculator test (only layout works)</string>
+    <string name="hello">Layout preview for vsel calc</string>
+    <string name="arrow">-></string>
+    <string name="calc">Calculate!</string>
+    <string name="mhz">MHz</string>
+    <string name="voltage">Recommended Voltage</string>
+
+</resources>
