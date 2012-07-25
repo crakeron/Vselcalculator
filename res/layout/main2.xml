@@ -3,17 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="110dp"
         android:layout_weight="0.00"
         android:orientation="vertical" >
-
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_weight="0.00" >
+            android:layout_height="100dp" >
 
             <TextView
                 android:id="@+id/Title"
@@ -29,7 +28,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_alignRight="@+id/Title" />
+                android:layout_alignRight="@+id/Title"
+                android:entries="@array/spinner_choices" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -64,7 +64,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="41dp"
                 android:text="@string/Column1"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/column2"
@@ -73,7 +73,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:text="@string/voltage"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </RelativeLayout>
 
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="25dp"
                     android:clickable="false" 
          			android:cursorVisible="false" 
         			android:focusable="false" 
@@ -117,11 +117,12 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/editText1"
-                    android:layout_alignBottom="@+id/editText1"
+                    android:layout_alignBaseline="@+id/freq1"
+                    android:layout_alignBottom="@+id/freq1"
                     android:layout_toRightOf="@+id/freq1"
                     android:text="@string/mhz"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
             </RelativeLayout>
         </LinearLayout>
 
@@ -150,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="25dp"
                     android:clickable="false" 
          			android:cursorVisible="false" 
         			android:focusable="false" 
@@ -206,7 +207,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="25dp"
                     android:clickable="false" 
          			android:cursorVisible="false" 
         			android:focusable="false" 
@@ -241,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="25dp"
                     android:clickable="false" 
          			android:cursorVisible="false" 
         			android:focusable="false" 
@@ -276,7 +277,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/calc" />
+            android:text="@string/calc"
+            android:onClick="button_pressed" />
 
     </LinearLayout>
 

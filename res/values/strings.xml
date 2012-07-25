@@ -6,10 +6,15 @@
     <string name="hello">Layout preview for vsel calc</string>
     <string name="arrow">-></string>
     <string name="calc">Calculate!</string>
-    <string name="mhz">MHz</string>
+    <string name="mhz"> MHz</string>
     <string name="voltage">Recommended Voltage</string>
     <string name="credits">Credits: ppero196, crakeron</string>
     <string name="spinner">Number of frequencies</string>
     <string name="welcome">Welcome to Vsel Calculator</string>
+    
+    <string-array name="spinner_choices">
+        <item>3</item>
+        <item>4</item>
+    </string-array>
 
 </resources>
