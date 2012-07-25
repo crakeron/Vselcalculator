@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -17,10 +17,7 @@
             android:layout_marginLeft="26dp"
             android:layout_marginTop="35dp"
             android:ems="10"
-            android:inputType="number" >
-
-            <requestFocus />
-        </EditText>
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/editText2"
@@ -111,7 +108,6 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/editText2"
             android:layout_alignBottom="@+id/editText2"
-            
             android:layout_toRightOf="@+id/editText2"
             android:text="@string/mhz"
             android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -125,20 +121,19 @@
             android:layout_alignRight="@+id/mhz1"
             android:text="@string/mhz"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
+
         <EditText
             android:id="@+id/voltage1"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/editText1"
             android:layout_toRightOf="@+id/calc_go"
+            android:clickable="false"
+            android:cursorVisible="false"
             android:ems="10"
-            android:clickable="false" 
-         	android:cursorVisible="false" 
-        	android:focusable="false" 
-        	android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:inputType="number" />
-        
 
         <TextView
             android:id="@+id/column2"
@@ -185,11 +180,11 @@
             android:layout_alignBaseline="@+id/arrow3"
             android:layout_alignBottom="@+id/arrow3"
             android:layout_alignLeft="@+id/voltage1"
+            android:clickable="false"
+            android:cursorVisible="false"
             android:ems="10"
-            android:clickable="false" 
-         	android:cursorVisible="false" 
-        	android:focusable="false" 
-        	android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:inputType="number" />
 
         <EditText
@@ -199,13 +194,12 @@
             android:layout_alignBaseline="@+id/arrow2"
             android:layout_alignBottom="@+id/arrow2"
             android:layout_alignLeft="@+id/voltage1"
+            android:clickable="false"
+            android:cursorVisible="false"
             android:ems="10"
-            android:clickable="false" 
-         	android:cursorVisible="false" 
-        	android:focusable="false" 
-        	android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:inputType="number" />
-
     </RelativeLayout>
 
 </LinearLayout>
