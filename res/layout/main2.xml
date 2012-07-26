@@ -44,11 +44,10 @@
         </RelativeLayout>
 
     </LinearLayout>
-
+
     <LinearLayout
         android:layout_width="320dp"
-        android:layout_height="205dp"
-        android:layout_marginRight="23dp"
+        android:layout_height="210dp"
         android:layout_weight="0.00"
         android:orientation="vertical" >
 
@@ -92,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginRight="35dp"
                     android:clickable="false" 
          			android:cursorVisible="false" 
         			android:focusable="false" 
@@ -123,6 +122,15 @@
                     android:text="@string/mhz"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/range"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
             </RelativeLayout>
         </LinearLayout>
 
@@ -151,7 +159,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginRight="35dp"
                     android:clickable="false" 
          			android:cursorVisible="false" 
         			android:focusable="false" 
@@ -166,6 +174,16 @@
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/freq2"
                     android:text="@string/mhz"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView6"
+                    android:layout_alignBottom="@+id/textView6"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/range"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
             </RelativeLayout>
@@ -207,13 +225,22 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginRight="35dp"
                     android:clickable="false" 
          			android:cursorVisible="false" 
         			android:focusable="false" 
         			android:focusableInTouchMode="false"
                     android:ems="10"
                     android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/TextView02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/range"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
             </RelativeLayout>
 
@@ -242,7 +269,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginRight="35dp"
                     android:clickable="false" 
          			android:cursorVisible="false" 
         			android:focusable="false" 
@@ -258,6 +285,15 @@
                     android:layout_alignBottom="@+id/freq4"
                     android:layout_toRightOf="@+id/freq4"
                     android:text="@string/mhz"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/TextView03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/range"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
             </RelativeLayout>

@@ -11,6 +11,7 @@
     <string name="credits">Credits: ppero196, crakeron</string>
     <string name="spinner">Number of frequencies</string>
     <string name="welcome">Welcome to Vsel Calculator</string>
+    <string name="range"> +/-2</string>
     
     <string-array name="spinner_choices">
         <item>3</item>
