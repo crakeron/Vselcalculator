@@ -13,6 +13,10 @@ public class VselcalculatortestActivity extends Activity {
 	private EditText freqbox2;
 	private EditText freqbox3;
 	private EditText freqbox4;
+	private EditText voltbox1;
+	private EditText voltbox2;
+	private EditText voltbox3;
+	private EditText voltbox4;
 	
     /** Called when the activity is first created. */
     @Override
@@ -24,6 +28,10 @@ public class VselcalculatortestActivity extends Activity {
         freqbox2 = (EditText) findViewById(R.id.freq2);
         freqbox3 = (EditText) findViewById(R.id.freq3);
         freqbox4 = (EditText) findViewById(R.id.freq4);
+        voltbox1 = (EditText) findViewById(R.id.volt1);
+        voltbox2 = (EditText) findViewById(R.id.volt2);
+        voltbox3 = (EditText) findViewById(R.id.volt3);
+        voltbox4 = (EditText) findViewById(R.id.volt4);
     }
           
         
@@ -53,6 +61,8 @@ public class VselcalculatortestActivity extends Activity {
     	// 2. Call calculate function with 3 (or 4) arguments
     	calculate(freq1, freq2, freq3, freq4, freq4ornot);
     	// 3. call function to display each result in correct box
+    	display_volt(freq4ornot);
+    	
     	
     	//test stuff to check if grab_values works...OK! :D
     	String message= String.valueOf(freq1);
@@ -98,8 +108,19 @@ public class VselcalculatortestActivity extends Activity {
     	int volt = ((freq/20)+2);
     	return volt;
     }
+
+
+public void display_volt (boolean trueornot){
+	voltbox1.setText(String.valueOf(volt1));
+	voltbox2.setText(String.valueOf(volt2));
+	voltbox3.setText(String.valueOf(volt3));
+	if(trueornot){
+	voltbox4.setText(String.valueOf(volt4));
+	}
+	
 }
 
+}
    
     
     
