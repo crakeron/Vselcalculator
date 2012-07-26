@@ -50,9 +50,8 @@ public class VselcalculatortestActivity extends Activity {
      spinner.setAdapter(adapter);
      spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
     	 
-    	 public void onItemSelected(AdapterView adapter, View v, int pos, long lng) {
-    	 //do something here
-    		String choice = adapter.getItemAtPosition(pos).toString();
+    	 public void onItemSelected(AdapterView <?> adapter, View v, int pos, long lng) {
+    	 	final String choice = adapter.getItemAtPosition(pos).toString();
          	if (choice=="3"){
          		freq4ornot=false;
          		Toast.makeText(getApplicationContext(),"you selected 3", Toast.LENGTH_SHORT).show();
