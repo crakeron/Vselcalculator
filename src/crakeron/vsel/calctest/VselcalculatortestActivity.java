@@ -60,7 +60,7 @@ public class VselcalculatortestActivity extends Activity {
     	voltbox2.setText("");
     	voltbox3.setText("");
     	voltbox4.setText("");
-    	stop=true;
+    	stop=false;
     	
     	
     	
@@ -93,8 +93,8 @@ public class VselcalculatortestActivity extends Activity {
       	freq1 = Integer.parseInt(freq1Value);//transform the string into an int and store it in our variable
     	}
     	if(freq1Value.length()==0){
-    		error_empty();
     		stop=true;
+    		error_empty();
     		freq1=0;
     	}
     	
@@ -103,8 +103,8 @@ public class VselcalculatortestActivity extends Activity {
           	freq2 = Integer.parseInt(freq2Value);//transform the string into an int and store it in our variable
         	}
         	if(freq2Value.length()==0){//check if user entered a value in box, otherwise causes crash
-        		error_empty();
         		stop=true;
+        		error_empty();        		
         		freq2=0;
         	}
     	String freq3Value = freqbox3.getText().toString();
@@ -112,8 +112,8 @@ public class VselcalculatortestActivity extends Activity {
           	freq3 = Integer.parseInt(freq3Value);//transform the string into an int and store it in our variable
         	}
         	if(freq3Value.length()==0){
-        		error_empty();
         		stop=true;
+        		error_empty();        	
         		freq3=0;
         	}
     	if (freq4ornot=true){
@@ -122,8 +122,8 @@ public class VselcalculatortestActivity extends Activity {
     	      	freq4 = Integer.parseInt(freq4Value);//transform the string into an int and store it in our variable
     	    	}
     	    	if(freq4Value.length()==0){
-    	    		error_empty();
-            		stop=true;
+    	    		stop=true;
+    	    		error_empty();            		
     	    		freq4=0;
     	    	}
     	}
