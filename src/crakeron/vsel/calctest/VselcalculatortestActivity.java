@@ -49,19 +49,29 @@ public class VselcalculatortestActivity extends Activity {
     public int volt3;
     public int volt4;
     public boolean freq4ornot=false;
+    public boolean stop=false;
     
   
     
     
     
     public void button_pressed(View button) { 
+    	voltbox1.setText("");
+    	voltbox2.setText("");
+    	voltbox3.setText("");
+    	voltbox4.setText("");
+    	stop=true;
+    	
+    	
+    	
     	//What to do when calculate button is pressed:
     	// 1. Grab values in textboxes freq1,2,3 (and 4, depending on Spinner value?) and store their values
-    	grab_values(freq4ornot);
+    	grab_values(freq4ornot, stop);
     	// 2. Call calculate function with 3 (or 4) arguments
+    	
     	calculate(freq1, freq2, freq3, freq4, freq4ornot);
     	// 3. call function to display each result in correct box
-    	display_volt(freq4ornot);
+    	display_volt(freq4ornot, stop);
     	
     	
     	//test stuff to check if grab_values works...OK! :D
@@ -76,21 +86,46 @@ public class VselcalculatortestActivity extends Activity {
     	
     }
     
-    public void grab_values(boolean freq4ornot){
+    public void grab_values(boolean freq4ornot,boolean stop){
     	
     	String freq1Value = freqbox1.getText().toString();//fetch what's in edittextbox and store it in a string
-    	if(freq1Value!=""){
+    	if(freq1Value.length()!=0){
       	freq1 = Integer.parseInt(freq1Value);//transform the string into an int and store it in our variable
     	}
-    	if(freq1Value=="") freq1=0;
+    	if(freq1Value.length()==0){
+    		error_empty();
+    		stop=true;
+    		freq1=0;
+    	}
     	
     	String freq2Value = freqbox2.getText().toString();
-    	freq2 = Integer.parseInt(freq2Value);
+    	if(freq2Value.length()!=0){
+          	freq2 = Integer.parseInt(freq2Value);//transform the string into an int and store it in our variable
+        	}
+        	if(freq2Value.length()==0){//check if user entered a value in box, otherwise causes crash
+        		error_empty();
+        		stop=true;
+        		freq2=0;
+        	}
     	String freq3Value = freqbox3.getText().toString();
-    	freq3 = Integer.parseInt(freq3Value);
+    	if(freq3Value.length()!=0){
+          	freq3 = Integer.parseInt(freq3Value);//transform the string into an int and store it in our variable
+        	}
+        	if(freq3Value.length()==0){
+        		error_empty();
+        		stop=true;
+        		freq3=0;
+        	}
     	if (freq4ornot=true){
     		String freq4Value = freqbox4.getText().toString();
-    		freq4 = Integer.parseInt(freq4Value);
+    		if(freq4Value.length()!=0){
+    	      	freq4 = Integer.parseInt(freq4Value);//transform the string into an int and store it in our variable
+    	    	}
+    	    	if(freq4Value.length()==0){
+    	    		error_empty();
+            		stop=true;
+    	    		freq4=0;
+    	    	}
     	}
     }
 
@@ -98,7 +133,7 @@ public class VselcalculatortestActivity extends Activity {
     	volt1 = formula(freq1);
     	volt2 = formula(freq2);
     	volt3 = formula(freq3);
-        if (freq4ornot){
+        if (freq4ornot=true){
         	volt4 = formula(freq4);
            }
     }
@@ -110,20 +145,29 @@ public class VselcalculatortestActivity extends Activity {
     }
 
 
-public void display_volt (boolean trueornot){
-	voltbox1.setText(String.valueOf(volt1));
-	voltbox2.setText(String.valueOf(volt2));
-	voltbox3.setText(String.valueOf(volt3));
-	if(trueornot){
-	voltbox4.setText(String.valueOf(volt4));
-	}
-	
-}
+    public void display_volt (boolean freq4ornot, boolean stop){
+    	if(stop==false){
+    		voltbox1.setText(String.valueOf(volt1));
+    		voltbox2.setText(String.valueOf(volt2));
+    		voltbox3.setText(String.valueOf(volt3));
+    		if(freq4ornot==true){
+    			voltbox4.setText(String.valueOf(volt4));
+    			}
+    		}
+    	
+    }
 
+    
+    public void error_empty(){
+    	Toast.makeText(getApplicationContext(), "Please enter a frequency in all the boxes", Toast.LENGTH_LONG).show();
+    	Toast.makeText(getApplicationContext(),"stop bool is " + String.valueOf(stop), Toast.LENGTH_LONG).show();
+    	
+    	
+    }
 }
    
     
-    
+	
   
 
 
