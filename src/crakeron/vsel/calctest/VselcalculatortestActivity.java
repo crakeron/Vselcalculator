@@ -49,7 +49,7 @@ public class VselcalculatortestActivity extends Activity {
     public int volt3;
     public int volt4;
     public boolean freq4ornot=false;
-    public boolean stop=false;
+    public boolean stop=false;//having trouble making the stop boolean work!
     
   
     
@@ -66,27 +66,19 @@ public class VselcalculatortestActivity extends Activity {
     	
     	//What to do when calculate button is pressed:
     	// 1. Grab values in textboxes freq1,2,3 (and 4, depending on Spinner value?) and store their values
-    	grab_values(freq4ornot, stop);
+    	grab_values(freq4ornot);
     	// 2. Call calculate function with 3 (or 4) arguments
     	
     	calculate(freq1, freq2, freq3, freq4, freq4ornot);
-    	// 3. call function to display each result in correct box
-    	display_volt(freq4ornot, stop);
+    	// 3. call function to display each result in correct box, if stop=true, then all boxes will be displayed empty
+    	display_volt(freq4ornot);
+    	if(stop==true) error_empty();
     	
-    	
-    	//test stuff to check if grab_values works...OK! :D
-    	String message= String.valueOf(freq1);
-    	Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);       
-    	toast.show();
-    	//test if calculate (and formula) works....Ok!:D
-    	String message2= String.valueOf(volt1);
-    	Toast toast2 = Toast.makeText(getApplicationContext(), message2, Toast.LENGTH_SHORT);       
-    	toast2.show();
     	
     	
     }
     
-    public void grab_values(boolean freq4ornot,boolean stop){
+    public void grab_values(boolean freq4ornot){
     	
     	String freq1Value = freqbox1.getText().toString();//fetch what's in edittextbox and store it in a string
     	if(freq1Value.length()!=0){
@@ -94,7 +86,6 @@ public class VselcalculatortestActivity extends Activity {
     	}
     	if(freq1Value.length()==0){
     		stop=true;
-    		error_empty();
     		freq1=0;
     	}
     	
@@ -103,8 +94,7 @@ public class VselcalculatortestActivity extends Activity {
           	freq2 = Integer.parseInt(freq2Value);//transform the string into an int and store it in our variable
         	}
         	if(freq2Value.length()==0){//check if user entered a value in box, otherwise causes crash
-        		stop=true;
-        		error_empty();        		
+        		stop=true;        		  		
         		freq2=0;
         	}
     	String freq3Value = freqbox3.getText().toString();
@@ -112,8 +102,7 @@ public class VselcalculatortestActivity extends Activity {
           	freq3 = Integer.parseInt(freq3Value);//transform the string into an int and store it in our variable
         	}
         	if(freq3Value.length()==0){
-        		stop=true;
-        		error_empty();        	
+        		stop=true;        		     	
         		freq3=0;
         	}
     	if (freq4ornot=true){
@@ -122,8 +111,7 @@ public class VselcalculatortestActivity extends Activity {
     	      	freq4 = Integer.parseInt(freq4Value);//transform the string into an int and store it in our variable
     	    	}
     	    	if(freq4Value.length()==0){
-    	    		stop=true;
-    	    		error_empty();            		
+    	    		stop=true;    	    		           		
     	    		freq4=0;
     	    	}
     	}
@@ -145,7 +133,7 @@ public class VselcalculatortestActivity extends Activity {
     }
 
 
-    public void display_volt (boolean freq4ornot, boolean stop){
+    public void display_volt (boolean freq4ornot){
     	if(stop==false){
     		voltbox1.setText(String.valueOf(volt1));
     		voltbox2.setText(String.valueOf(volt2));
@@ -160,7 +148,10 @@ public class VselcalculatortestActivity extends Activity {
     
     public void error_empty(){
     	Toast.makeText(getApplicationContext(), "Please enter a frequency in all the boxes", Toast.LENGTH_LONG).show();
-    	Toast.makeText(getApplicationContext(),"stop bool is " + String.valueOf(stop), Toast.LENGTH_LONG).show();
+    	/* For debug purposes
+    	Toast.makeText(getApplicationContext(),"stop bool is " + stop, Toast.LENGTH_LONG).show();*/
+    	
+    	
     	
     	
     }
