@@ -3,7 +3,11 @@ package crakeron.vsel.calctest;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 
@@ -17,6 +21,8 @@ public class VselcalculatortestActivity extends Activity {
 	private EditText voltbox2;
 	private EditText voltbox3;
 	private EditText voltbox4;
+	public Spinner spinner;
+	public boolean freq4ornot=false;
 	
     /** Called when the activity is first created. */
     @Override
@@ -32,9 +38,45 @@ public class VselcalculatortestActivity extends Activity {
         voltbox2 = (EditText) findViewById(R.id.volt2);
         voltbox3 = (EditText) findViewById(R.id.volt3);
         voltbox4 = (EditText) findViewById(R.id.volt4);
+        spinner = (Spinner) findViewById(R.id.spinner1);
+        
+        
+     
+     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+             R.array.spinner_choices, android.R.layout.simple_spinner_item);
+     // Specify the layout to use when the list of choices appears
+     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+     // Apply the adapter to the spinner
+     spinner.setAdapter(adapter);
+     spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+    	 
+    	 public void onItemSelected(AdapterView adapter, View v, int pos, long lng) {
+    	 //do something here
+    		String choice = adapter.getItemAtPosition(pos).toString();
+         	if (choice=="3"){
+         		freq4ornot=false;
+         		Toast.makeText(getApplicationContext(),"you selected 3", Toast.LENGTH_SHORT).show();
+         	}
+         	if (choice=="4"){
+         		freq4ornot=true;
+         		Toast.makeText(getApplicationContext(),"you selected 4", Toast.LENGTH_SHORT).show();
+         	}
+         	
+         	
+         	Toast.makeText(getApplicationContext(),choice, Toast.LENGTH_SHORT).show();
+         	Toast.makeText(getApplicationContext(),"freq4ornot bool is " + freq4ornot, Toast.LENGTH_SHORT).show();
+    	 }
+    	  
+    	 public void onNothingSelected(AdapterView arg0) {
+    	 //do something else
+    	 }
+    	 });
+     
+     
+     
     }
           
-        
+    
      
      
      /*String num_freq = spinner.getSelectedItem().toString();*/
@@ -48,10 +90,9 @@ public class VselcalculatortestActivity extends Activity {
     public int volt2;
     public int volt3;
     public int volt4;
-    public boolean freq4ornot=false;
-    public boolean stop=false;//having trouble making the stop boolean work!
     
-  
+    public boolean stop=false;
+    
     
     
     
@@ -155,6 +196,10 @@ public class VselcalculatortestActivity extends Activity {
     	
     	
     }
+    
+    
+    
+    
 }
    
     
