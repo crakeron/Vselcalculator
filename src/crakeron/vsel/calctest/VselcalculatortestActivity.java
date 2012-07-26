@@ -51,18 +51,9 @@ public class VselcalculatortestActivity extends Activity {
      spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
     	 
     	 public void onItemSelected(AdapterView <?> adapter, View v, int pos, long lng) {
-    	 	final String choice = adapter.getItemAtPosition(pos).toString();
-         	if (choice=="3"){
-         		freq4ornot=false;
-         		Toast.makeText(getApplicationContext(),"you selected 3", Toast.LENGTH_SHORT).show();
-         	}
-         	if (choice=="4"){
-         		freq4ornot=true;
-         		Toast.makeText(getApplicationContext(),"you selected 4", Toast.LENGTH_SHORT).show();
-         	}
+         	if (pos==0){freq4ornot=false;}
+         	if (pos==1){freq4ornot=true;}
          	
-         	
-         	Toast.makeText(getApplicationContext(),choice, Toast.LENGTH_SHORT).show();
          	Toast.makeText(getApplicationContext(),"freq4ornot bool is " + freq4ornot, Toast.LENGTH_SHORT).show();
     	 }
     	  
@@ -145,7 +136,7 @@ public class VselcalculatortestActivity extends Activity {
         		stop=true;        		     	
         		freq3=0;
         	}
-    	if (freq4ornot=true){
+    	if (freq4ornot==true){
     		String freq4Value = freqbox4.getText().toString();
     		if(freq4Value.length()!=0){
     	      	freq4 = Integer.parseInt(freq4Value);//transform the string into an int and store it in our variable
@@ -161,7 +152,7 @@ public class VselcalculatortestActivity extends Activity {
     	volt1 = formula(freq1);
     	volt2 = formula(freq2);
     	volt3 = formula(freq3);
-        if (freq4ornot=true){
+        if (freq4ornot==true){
         	volt4 = formula(freq4);
            }
     }
