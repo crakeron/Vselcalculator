@@ -36,7 +36,7 @@ public class VselcalculatortestActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main2);
+        setContentView(R.layout.main);
         
         freqbox1 = (EditText) findViewById(R.id.freq1);
         freqbox2 = (EditText) findViewById(R.id.freq2);
@@ -57,13 +57,22 @@ public class VselcalculatortestActivity extends Activity {
         
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
         			public void onItemSelected(AdapterView <?> adapter, View v, int pos, long lng) {
-        				if (pos==0){freq4ornot=false;}
-        				if (pos==1){freq4ornot=true;}
-        				Toast.makeText(getApplicationContext(),"freq4ornot bool is " + freq4ornot, Toast.LENGTH_SHORT).show();
+        				if (pos==0){
+        					freq4ornot=false;
+        					freqbox4.setVisibility(View.INVISIBLE);
+        					findViewById(R.id.textView8).setVisibility(View.INVISIBLE);
+        					findViewById(R.id.TextView03).setVisibility(View.INVISIBLE);
+        					voltbox4.setVisibility(View.INVISIBLE);}
+        				if (pos==1){
+        					freq4ornot=true;
+        					freqbox4.setVisibility(View.VISIBLE);
+        					findViewById(R.id.textView8).setVisibility(View.VISIBLE);
+        					findViewById(R.id.TextView03).setVisibility(View.VISIBLE);
+        					voltbox4.setVisibility(View.VISIBLE);}        				
         			}
     	  
         			public void onNothingSelected(AdapterView <?> arg0) {
-        				//nothing ATM
+        				//nothing FTM
         			}
         });
     }
