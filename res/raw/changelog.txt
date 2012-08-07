@@ -19,6 +19,14 @@
     </style>
   </head>
   <body>
+
+$ 0.9.3
+  % Version 0.9.3
+  _ 07-08-2012
+  * Fixed Landscape
+  * Modified text colours!
+  
+$ END_OF_CHANGE_LOG  
   
 $ 0.9.2
   % Version 0.9.2
@@ -26,6 +34,6 @@ $ 0.9.2
   * Implemented changelog
   * Other modifications invisible to the user
   
-$ END_OF_CHANGE_LOG
+
   </body>
 </html>
