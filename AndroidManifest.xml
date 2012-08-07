@@ -2,14 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="crakeron.vsel.calctest"
     android:versionCode="1"
-    android:versionName="0.9.1" >
+    android:versionName="0.9.2" >
 
     <uses-sdk android:minSdkVersion="8" 
         android:targetSdkVersion="16"/>
         		
     <application
-        android:theme="@style/MyAppTheme">
-        android:icon="@drawable/ic_launcher"
+        android:theme="@style/MyAppTheme"
+        android:icon="@drawable/launcher_icon"
         android:label="@string/app_name" >
         <activity
             android:name=".VselcalculatortestActivity"
