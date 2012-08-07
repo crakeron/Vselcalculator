@@ -306,10 +306,10 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.00"
         android:orientation="vertical" >
-
+
         <Button
             android:id="@+id/calc"
-            android:layout_width="wrap_content"
+            android:layout_width="198dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:onClick="button_pressed"
