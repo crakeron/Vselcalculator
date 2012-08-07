@@ -306,14 +306,14 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.00"
         android:orientation="vertical" >
-
+
         <Button
             android:id="@+id/calc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/calc"
-            android:onClick="button_pressed" />
+            android:onClick="button_pressed"
+            android:text="@string/calc" />
 
     </LinearLayout>
 
@@ -330,6 +330,8 @@
             android:layout_gravity="right"
             android:layout_weight="0.00"
             android:text="@string/credits"
+            android:textColor="#34C6E3"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </LinearLayout>

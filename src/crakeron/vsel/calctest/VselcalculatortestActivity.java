@@ -42,6 +42,8 @@ public class VselcalculatortestActivity extends Activity {
         if (cl.firstRun())
             cl.getLogDialog().show();
         
+        //cl.getFullLogDialog().show(); for testing 
+        
         freqbox1 = (EditText) findViewById(R.id.freq1);
         freqbox2 = (EditText) findViewById(R.id.freq2);
         freqbox3 = (EditText) findViewById(R.id.freq3);
