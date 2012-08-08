@@ -2,7 +2,7 @@
 <resources>
 
     <string name="Column1">CPU freq</string>
-    <string name="app_name">Vsel calculator test (only layout works)</string>
+    <string name="app_name">Vsel Calculator</string>
     <string name="hello">Layout preview for vsel calc</string>
     <string name="arrow">-></string>
     <string name="calc">Calculate!</string>
