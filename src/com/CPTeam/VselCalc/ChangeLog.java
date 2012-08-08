@@ -19,8 +19,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import crakeron.vsel.calctest.R;
 
+
+
+import crakeron.vsel.calctest.R;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
