@@ -3,14 +3,14 @@
     <style type='text/css'>
       a            { color:#a0a0e0 }
       div.title    { 
-          color:#C0F0C0; 
+          color:#008000; 
           font-size:1.2em; 
           font-weight:bold; 
           margin-top:1em; 
           margin-bottom:0.5em; 
           text-align:center }
       div.subtitle { 
-          color:#C0F0C0; 
+          color:#008000; 
           font-size:0.8em; 
           margin-bottom:1em; 
           text-align:center }
@@ -19,9 +19,12 @@
     </style>
   </head>
   <body>
-$ 0.9.3.5
-  %Version 0.9.3.5
-  _ 08-08-2012
+  $ 0.9.4
+  %Version 0.9.4
+  _ 09-08-2012
+  *Fixed changelog colours (part 2)
+  *Fixed landscape style
+  *Laying foundation for translation! Translators needed!
   *Added Auto-detect button, allthough it is not functionnal yet
   *Changed the package name
   
