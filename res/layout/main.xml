@@ -318,7 +318,8 @@
          android:layout_alignParentLeft="true"
          android:layout_alignParentTop="true"
          android:layout_marginLeft="28dp"
-         android:text="@string/auto_detect" />
+         android:text="@string/auto_detect"
+         android:onClick="auto_detect" />
 
      <Button
          android:id="@+id/calc"

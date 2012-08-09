@@ -22,7 +22,7 @@ public class VselcalculatortestActivity extends Activity {
 	private EditText voltbox3;
 	private EditText voltbox4;
 	private Spinner spinner;
-	
+
 	public int freq1;
     public int freq2;
     public int freq3;
@@ -34,6 +34,8 @@ public class VselcalculatortestActivity extends Activity {
     
     public boolean stop=false;
     public boolean freq4ornot=false;
+    
+    //public String path;
 	
     /** Called when the activity is first created. */
     @Override
@@ -175,5 +177,60 @@ public class VselcalculatortestActivity extends Activity {
     
     
     
+    
+    
+    
+    
+    
+                        //AUTODETECTION FUNCTIONS!!!
+    
+    private int detected_freq1=300;
+    private int detected_freq2=600;
+    private int detected_freq3=1000;
+    private int detected_freq4=1100;
+    
+    
+    public void auto_detect(View button){
+    	stop=false;
+    	
+    	//1 -if device not supported, send error toast "device not supported" and abort
+    	
+    	
+    	//2 -get the path string (for multiple device support) that leads to the cpu_freq file
+    		get_path();
+    	
+    	//3 -execute ?a shell script? to grab the 3/4 frequencies in that file
+    		// or use cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies | wc -w
+    	
+    	//4 -fill the 3/4 freq boxes with the frequencies found
+    		write_freq(detected_freq1,detected_freq2,detected_freq3,detected_freq4);
+
+    	}
+    	
+    	private void get_path(){
+    		//find path for frequencies available
+    		// for Defy (and milestone etc) it is /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
+    		// for multiple devices, probably store the paths in a table
+    		
+    		//path="the_path_found";
+    	}
+    	
+    	
+    	
+    	
+    	
+    	public void write_freq(int fr1, int fr2, int fr3, int fr4){
+    		if(stop==false){
+        		freqbox1.setText(String.valueOf(fr1));
+        		freqbox2.setText(String.valueOf(fr2));
+        		freqbox3.setText(String.valueOf(fr3));
+        		if(freq4ornot==true){freqbox4.setText(String.valueOf(fr4));}
+        	}
+    		
+    	}
+    	
+    	
+    	
+    	
     
 }
