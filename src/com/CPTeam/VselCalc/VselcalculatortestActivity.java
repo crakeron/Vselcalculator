@@ -193,17 +193,22 @@ public class VselcalculatortestActivity extends Activity {
     public void auto_detect(View button){
     	stop=false;
     	
+    	
     	//1 -if device not supported, send error toast "device not supported" and abort
+    	
+    	if(!android.os.Build.MODEL.equals("MB525")){stop=true;}
     	
     	
     	//2 -get the path string (for multiple device support) that leads to the cpu_freq file
-    		get_path();
+    		if (stop==false){get_path();}
     	
     	//3 -execute ?a shell script? to grab the 3/4 frequencies in that file
     		// or use cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies | wc -w
     	
     	//4 -fill the 3/4 freq boxes with the frequencies found
-    		write_freq(detected_freq1,detected_freq2,detected_freq3,detected_freq4);
+    		if (stop==false){write_freq(detected_freq1,detected_freq2,detected_freq3,detected_freq4);}
+    		
+    		if (stop==true){error_device();}
 
     	}
     	
@@ -227,6 +232,10 @@ public class VselcalculatortestActivity extends Activity {
         		if(freq4ornot==true){freqbox4.setText(String.valueOf(fr4));}
         	}
     		
+    	}
+    	
+    	public void error_device(){
+        	Toast.makeText(getApplicationContext(), "Function not supported on your device. Contact the developers", Toast.LENGTH_LONG).show();
     	}
     	
     	
