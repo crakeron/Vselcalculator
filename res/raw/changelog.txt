@@ -19,13 +19,20 @@
     </style>
   </head>
   <body>
-  
+$ 0.9.6
+  %Version 0.9.6
+  _ 11-08-2012
+  *Autodetection improved
+  *Added Logs for debugging/testing
+  *new functions to simplify actions
+ $ END_OF_CHANGE_LOG 
+    
 $ 0.9.5
   %Version 0.9.5
   _ 11-08-2012
   *Autodetection!
   
-$ END_OF_CHANGE_LOG 
+
   
 $ 0.9.4.1
   %Version 0.9.4.1

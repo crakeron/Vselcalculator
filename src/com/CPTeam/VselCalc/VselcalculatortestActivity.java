@@ -77,16 +77,12 @@ public class VselcalculatortestActivity extends Activity {
         			public void onItemSelected(AdapterView <?> adapter, View v, int pos, long lng) {
         				if (pos==0){
         					freq4ornot=false;
-        					freqbox4.setVisibility(View.INVISIBLE);
-        					findViewById(R.id.textView8).setVisibility(View.INVISIBLE);
-        					findViewById(R.id.TextView03).setVisibility(View.INVISIBLE);
-        					voltbox4.setVisibility(View.INVISIBLE);}
+        					hide_row4();
+        					}
         				if (pos==1){
         					freq4ornot=true;
-        					freqbox4.setVisibility(View.VISIBLE);
-        					findViewById(R.id.textView8).setVisibility(View.VISIBLE);
-        					findViewById(R.id.TextView03).setVisibility(View.VISIBLE);
-        					voltbox4.setVisibility(View.VISIBLE);}        				
+        					show_row4();
+        					}        				
         			}
     	  
         			public void onNothingSelected(AdapterView <?> arg0) {
@@ -95,6 +91,22 @@ public class VselcalculatortestActivity extends Activity {
         });
     }
  
+    public void show_row4(){
+    	freqbox4.setVisibility(View.VISIBLE);
+		findViewById(R.id.textView8).setVisibility(View.VISIBLE);
+		findViewById(R.id.TextView03).setVisibility(View.VISIBLE);
+		voltbox4.setVisibility(View.VISIBLE);
+		Log.d("VselCalc", "Showing row 4");
+    	
+    }
+    
+    public void hide_row4(){
+    	freqbox4.setVisibility(View.INVISIBLE);
+		findViewById(R.id.textView8).setVisibility(View.INVISIBLE);
+		findViewById(R.id.TextView03).setVisibility(View.INVISIBLE);
+		voltbox4.setVisibility(View.INVISIBLE);
+		Log.d("VselCalc", "Hiding row 4");
+    }
     
     public void button_pressed(View button) { 
     	voltbox1.setText("");
@@ -204,7 +216,7 @@ public class VselcalculatortestActivity extends Activity {
     	
     	//1 -if device not supported, send error toast "device not supported" and abort
     	
-    	if(!android.os.Build.MODEL.equals("MB525")){stop=true;}
+    
     	
     	
     	//2 -get the path string (for multiple device support) that leads to the cpu_freq file
@@ -229,6 +241,7 @@ public class VselcalculatortestActivity extends Activity {
     		
     		path="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies";
     		
+    		
     	}
     	
     	private void detect(){
@@ -241,6 +254,7 @@ public class VselcalculatortestActivity extends Activity {
     		} 
     		catch (FileNotFoundException e) {   	        
     	        Toast.makeText(getApplicationContext(), "Could not read " + path, Toast.LENGTH_LONG).show();
+    	        stop=true;
     	        return;
     	    }
     	    
@@ -262,12 +276,14 @@ public class VselcalculatortestActivity extends Activity {
     	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read3: " + Read);
     	                detected_freq3= (int) Read/1000;
     	                Log.d("VselCalc_AutoD", "freq4 or not: " + freq4ornot);
+    	                hide_row4();
     	                if(segs.length==4){
     	                Read = Long.parseLong(segs[3]);
     	                Log.d("VselCalc_AutoD", "Freq4 exists. Auto-Detect freq. Read4: " + Read);
     	                detected_freq4= (int) Read/1000;
     	        	    freq4ornot=true;
     	        	    Log.d("VselCalc_AutoD", "freq4ornot changed to true after auto-detect");
+    	        	    show_row4();
     	                }
     	            
     	        }
@@ -295,7 +311,7 @@ public class VselcalculatortestActivity extends Activity {
     	}
     	
     	public void error_device(){
-        	Toast.makeText(getApplicationContext(), "Function not supported on your device. Contact the developers", Toast.LENGTH_LONG).show();
+        	Toast.makeText(getApplicationContext(), "Function may not be supported on your device. Contact the developers", Toast.LENGTH_LONG).show();
     	}
     	
     	
