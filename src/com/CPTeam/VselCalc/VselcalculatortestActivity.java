@@ -2,9 +2,16 @@ package com.CPTeam.VselCalc;
 
 
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+
 import crakeron.vsel.calctest.R;
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -188,10 +195,11 @@ public class VselcalculatortestActivity extends Activity {
     private int detected_freq2=600;
     private int detected_freq3=1000;
     private int detected_freq4=1100;
-    
+    private String path;
     
     public void auto_detect(View button){
     	stop=false;
+    	freq4ornot=false;
     	
     	
     	//1 -if device not supported, send error toast "device not supported" and abort
@@ -204,9 +212,11 @@ public class VselcalculatortestActivity extends Activity {
     	
     	//3 -execute ?a shell script? to grab the 3/4 frequencies in that file
     		// or use cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies | wc -w
+    		
+    		detect();
     	
     	//4 -fill the 3/4 freq boxes with the frequencies found
-    		if (stop==false){write_freq(detected_freq1,detected_freq2,detected_freq3,detected_freq4);}
+    		write_freq(detected_freq1,detected_freq2,detected_freq3,detected_freq4);
     		
     		if (stop==true){error_device();}
 
@@ -214,12 +224,61 @@ public class VselcalculatortestActivity extends Activity {
     	
     	private void get_path(){
     		//find path for frequencies available
-    		// for Defy (and milestone etc) it is /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
-    		// for multiple devices, probably store the paths in a table
+    		// for Defy (and milestone, and many other android devices) it is /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
+    		// for multiple devices support, probably store the paths in a table
     		
-    		//path="the_path_found";
+    		path="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies";
+    		
     	}
     	
+    	private void detect(){
+    		String[] segs;
+    		FileReader fstream;
+    		long Read;
+
+    	    try {fstream = new FileReader(path);
+    	    Log.d("VselCalc_AutoD", "Opened '" + path + "' file correctly");
+    		} 
+    		catch (FileNotFoundException e) {   	        
+    	        Toast.makeText(getApplicationContext(), "Could not read " + path, Toast.LENGTH_LONG).show();
+    	        return;
+    	    }
+    	    
+    	    BufferedReader in = new BufferedReader(fstream, 500);
+    	    String line;
+    	    try {
+    	        while ((line = in.readLine()) != null) {
+    	            
+    	        		Log.d("VselCalc_AutoD", "line read:"+  line);
+    	                segs = line.trim().split(" ");
+    	                Log.d("VselCalc_AutoD", "segs length: " + segs.length);
+    	                Read = Long.parseLong(segs[0]);
+    	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read1: " + Read);  
+    	                detected_freq1= (int) Read/1000;
+    	                Read = Long.parseLong(segs[1]);
+    	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read2: " + Read);
+    	                detected_freq2= (int) Read/1000;
+    	                Read = Long.parseLong(segs[2]);
+    	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read3: " + Read);
+    	                detected_freq3= (int) Read/1000;
+    	                Log.d("VselCalc_AutoD", "freq4 or not: " + freq4ornot);
+    	                if(segs.length==4){
+    	                Read = Long.parseLong(segs[3]);
+    	                Log.d("VselCalc_AutoD", "Freq4 exists. Auto-Detect freq. Read4: " + Read);
+    	                detected_freq4= (int) Read/1000;
+    	        	    freq4ornot=true;
+    	        	    Log.d("VselCalc_AutoD", "freq4ornot changed to true after auto-detect");
+    	                }
+    	            
+    	        }
+    	         //call function to update textviews or whatever
+    	        return;
+    	    } catch (IOException e) {
+    	        Log.e("readfile", e.toString());
+    	    }
+    	    return ;
+    		
+    	}
     	
     	
     	
@@ -230,6 +289,7 @@ public class VselcalculatortestActivity extends Activity {
         		freqbox2.setText(String.valueOf(fr2));
         		freqbox3.setText(String.valueOf(fr3));
         		if(freq4ornot==true){freqbox4.setText(String.valueOf(fr4));}
+        		Toast.makeText(getApplicationContext(), "Auto-Detection successful!", Toast.LENGTH_LONG).show();
         	}
     		
     	}

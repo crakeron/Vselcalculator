@@ -19,14 +19,22 @@
     </style>
   </head>
   <body>
-  $ 0.9.4.1
+  
+$ 0.9.5
+  %Version 0.9.5
+  _ 11-08-2012
+  *Autodetection!
+  
+$ END_OF_CHANGE_LOG 
+  
+$ 0.9.4.1
   %Version 0.9.4.1
   _ 10-08-2012
   *Redesigned icon
   
-$ END_OF_CHANGE_LOG  
 
-  $ 0.9.4
+
+$ 0.9.4
   %Version 0.9.4
   _ 09-08-2012
   *Fixed changelog colours (part 2)
@@ -35,7 +43,7 @@ $ END_OF_CHANGE_LOG
   *Added Auto-detect button, allthough it is not functionnal yet
   *Changed the package name
   
-$ END_OF_CHANGE_LOG  
+ 
 
 $ 0.9.3
   % Version 0.9.3
