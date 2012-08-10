@@ -19,6 +19,13 @@
     </style>
   </head>
   <body>
+  $ 0.9.4.1
+  %Version 0.9.4.1
+  _ 10-08-2012
+  *Redesigned icon
+  
+$ END_OF_CHANGE_LOG  
+
   $ 0.9.4
   %Version 0.9.4
   _ 09-08-2012
