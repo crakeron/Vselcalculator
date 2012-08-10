@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="Column1">CPU frekvencija</string>
+    <string name="app_name">Vsel Kalkulator</string>
+    <string name="hello">Pozdrav!</string>
+    <string name="arrow">-></string>
+    <string name="calc">Izračunaj!</string>
+    <string name="mhz"> MHz</string>
+    <string name="voltage">Preporučeni napon</string>
+    <string name="credits">Pohvale CPTeamu: ppero196, crakeron</string>
+    <string name="spinner">Broj frekvencija</string>
+    <string name="welcome">Dobrodošli u Vsel Kalkulator</string>
+    <string name="range"> +/-2</string>
+    <string name="changelog_full_title">Promjene</string>
+    <string name="changelog_title">Što\je Novo</string>
+    <string name="changelog_ok_button">OK</string>
+    <string name="changelog_show_full">više...</string>
+    <string name="auto_detect">Auto-Detektiraj!</string>
+    
+    <string-array name="spinner_choices">
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+</resources>
