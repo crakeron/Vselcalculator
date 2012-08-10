@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="crakeron.vsel.calctest"
     android:versionCode="1"
-    android:versionName="0.9.2" >
+    android:versionName="0.9.4.1" >
 
     <uses-sdk android:minSdkVersion="8" 
         android:targetSdkVersion="16"/>
@@ -12,7 +12,7 @@
         android:icon="@drawable/launcher_icon"
         android:label="@string/app_name" >
         <activity
-            android:name=".VselcalculatortestActivity"
+            android:name="com.CPTeam.VselCalc.VselcalculatortestActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_weight="0.00"
         android:orientation="vertical" >
-
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="100dp" >
@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_alignRight="@+id/Title"  />
+                android:layout_alignRight="@+id/Title" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -40,10 +40,39 @@
                 android:text="@string/spinner"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        </RelativeLayout>
+            <Button
+                android:id="@+id/Button01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/spinner1"
+                android:onClick="button_pressed"
+                android:text="@string/calc" />
 
+            <Button
+                android:id="@+id/detect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="0.00"
+                android:text="@string/auto_detect" />
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/Button01"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="0.00"
+                android:text="@string/credits"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#34C6E3"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
     </LinearLayout>
-
+
     <LinearLayout
         android:layout_width="320dp"
         android:layout_height="210dp"
@@ -53,7 +82,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-
+
             <TextView
                 android:id="@+id/column1"
                 android:layout_width="wrap_content"
@@ -63,7 +92,7 @@
                 android:layout_marginLeft="41dp"
                 android:text="@string/Column1"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
+
             <TextView
                 android:id="@+id/column2"
                 android:layout_width="wrap_content"
@@ -72,7 +101,6 @@
                 android:layout_alignParentTop="true"
                 android:text="@string/voltage"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
         </RelativeLayout>
 
         <LinearLayout
@@ -83,7 +111,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
-
+
                 <EditText
                     android:id="@+id/volt1"
                     android:layout_width="80dp"
@@ -91,16 +119,16 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginRight="35dp"
-                    android:clickable="false" 
-         			android:cursorVisible="false" 
-        			android:focusable="false" 
-        			android:focusableInTouchMode="false"
+                    android:clickable="false"
+                    android:cursorVisible="false"
                     android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
                     android:inputType="number" >
 
                     <requestFocus />
                 </EditText>
-
+
                 <EditText
                     android:id="@+id/freq1"
                     android:layout_width="80dp"
@@ -129,7 +157,6 @@
                     android:layout_centerVertical="true"
                     android:text="@string/range"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
-
             </RelativeLayout>
         </LinearLayout>
 
@@ -137,11 +164,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.00" >
-
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
-
+
                 <EditText
                     android:id="@+id/freq2"
                     android:layout_width="80dp"
@@ -151,7 +178,7 @@
                     android:layout_marginLeft="35dp"
                     android:ems="10"
                     android:inputType="number" />
-
+
                 <EditText
                     android:id="@+id/volt2"
                     android:layout_width="80dp"
@@ -159,11 +186,11 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginRight="35dp"
-                    android:clickable="false" 
-         			android:cursorVisible="false" 
-        			android:focusable="false" 
-        			android:focusableInTouchMode="false"
+                    android:clickable="false"
+                    android:cursorVisible="false"
                     android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
                     android:inputType="number" />
 
                 <TextView
@@ -184,9 +211,7 @@
                     android:layout_alignParentRight="true"
                     android:text="@string/range"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
-
             </RelativeLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -197,7 +222,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
+
                 <EditText
                     android:id="@+id/freq3"
                     android:layout_width="80dp"
@@ -207,7 +232,7 @@
                     android:layout_marginLeft="35dp"
                     android:ems="10"
                     android:inputType="number" />
-
+
                 <TextView
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
@@ -217,7 +242,7 @@
                     android:layout_toRightOf="@+id/freq3"
                     android:text="@string/mhz"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
-
+
                 <EditText
                     android:id="@+id/volt3"
                     android:layout_width="80dp"
@@ -225,11 +250,11 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginRight="35dp"
-                    android:clickable="false" 
-         			android:cursorVisible="false" 
-        			android:focusable="false" 
-        			android:focusableInTouchMode="false"
+                    android:clickable="false"
+                    android:cursorVisible="false"
                     android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
                     android:inputType="number" />
 
                 <TextView
@@ -240,9 +265,7 @@
                     android:layout_centerVertical="true"
                     android:text="@string/range"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
-
             </RelativeLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -253,7 +276,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
+
                 <EditText
                     android:id="@+id/freq4"
                     android:layout_width="80dp"
@@ -261,7 +284,7 @@
                     android:layout_marginLeft="35dp"
                     android:ems="10"
                     android:inputType="number" />
-
+
                 <EditText
                     android:id="@+id/volt4"
                     android:layout_width="80dp"
@@ -269,13 +292,13 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginRight="35dp"
-                    android:clickable="false" 
-         			android:cursorVisible="false" 
-        			android:focusable="false" 
-        			android:focusableInTouchMode="false"
+                    android:clickable="false"
+                    android:cursorVisible="false"
                     android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
                     android:inputType="number" />
-
+
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
@@ -294,11 +317,8 @@
                     android:layout_centerVertical="true"
                     android:text="@string/range"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
-
             </RelativeLayout>
-
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
@@ -306,23 +326,22 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.00"
         android:orientation="vertical" >
-
+
         <Button
             android:id="@+id/calc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/calc"
-            android:onClick="button_pressed" />
-
+            android:onClick="button_pressed"
+            android:text="@string/calc" />
     </LinearLayout>
-
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom"
         android:orientation="vertical" >
-
+
         <TextView
             android:id="@+id/credits"
             android:layout_width="wrap_content"
@@ -331,7 +350,6 @@
             android:layout_weight="0.00"
             android:text="@string/credits"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
     </LinearLayout>
 
 </LinearLayout>

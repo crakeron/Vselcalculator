@@ -2,13 +2,13 @@
 <resources>
 
     <string name="Column1">CPU freq</string>
-    <string name="app_name">Vsel calculator test (only layout works)</string>
+    <string name="app_name">Vsel Calculator</string>
     <string name="hello">Layout preview for vsel calc</string>
     <string name="arrow">-></string>
     <string name="calc">Calculate!</string>
     <string name="mhz"> MHz</string>
     <string name="voltage">Recommended Voltage</string>
-    <string name="credits">Credits: ppero196, crakeron</string>
+    <string name="credits">Credits go to CPTeam: ppero196, crakeron</string>
     <string name="spinner">Number of frequencies</string>
     <string name="welcome">Welcome to Vsel Calculator</string>
     <string name="range"> +/-2</string>
@@ -16,6 +16,7 @@
     <string name="changelog_title">What\'s New</string>
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">more...</string>
+    <string name="auto_detect">Auto-Detect!</string>
     
     <string-array name="spinner_choices">
         <item>3</item>
