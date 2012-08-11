@@ -22,18 +22,13 @@
 $ 0.9.6
   %Version 0.9.6
   _ 11-08-2012
+  *Autodetection!
   *Autodetection improved
   *Added Logs for debugging/testing
   *new functions to simplify actions
+  *testing for action bar
  $ END_OF_CHANGE_LOG 
-    
-$ 0.9.5
-  %Version 0.9.5
-  _ 11-08-2012
-  *Autodetection!
-  
 
-  
 $ 0.9.4.1
   %Version 0.9.4.1
   _ 10-08-2012
