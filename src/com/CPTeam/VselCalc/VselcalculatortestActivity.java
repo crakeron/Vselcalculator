@@ -7,8 +7,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-
 import crakeron.vsel.calctest.R;
+
+
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
