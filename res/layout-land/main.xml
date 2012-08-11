@@ -9,7 +9,7 @@
         android:layout_height="110dp"
         android:layout_weight="0.00"
         android:orientation="vertical" >
-
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="100dp" >
@@ -23,22 +23,43 @@
                 android:text="@string/welcome"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <Spinner
-                android:id="@+id/spinner1"
+            <Button
+                android:id="@+id/detect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_alignRight="@+id/Title" />
+                android:layout_alignParentLeft="true"
+                android:layout_weight="0.00"
+                android:onClick="auto_detect"
+                android:text="@string/auto_detect" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/spinner1"
-                android:layout_alignBottom="@+id/spinner1"
-                android:layout_alignLeft="@+id/Title"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/detect"
                 android:text="@string/spinner"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Title"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="0.00"
+                android:text="@string/credits"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#34C6E3"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_toRightOf="@+id/textView2" />
 
             <Button
                 android:id="@+id/Button01"
@@ -49,29 +70,8 @@
                 android:onClick="button_pressed"
                 android:text="@string/calc" />
 
-            <Button
-                android:id="@+id/detect"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_weight="0.00"
-                android:text="@string/auto_detect"
-                android:onClick="auto_detect" />
-
-            <TextView
-                android:id="@+id/TextView04"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/Button01"
-                android:layout_centerHorizontal="true"
-                android:layout_weight="0.00"
-                android:text="@string/credits"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#34C6E3"
-                android:textStyle="bold" />
-
         </RelativeLayout>
+
     </LinearLayout>
 
     <LinearLayout
