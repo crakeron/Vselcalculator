@@ -203,52 +203,37 @@ public class VselcalculatortestActivity extends Activity {
     
                         //AUTODETECTION FUNCTIONS!!!
     
-    private int detected_freq1=300;
-    private int detected_freq2=600;
-    private int detected_freq3=1000;
-    private int detected_freq4=1100;
+    private int detected_freq1;
+    private int detected_freq2;
+    private int detected_freq3;
+    private int detected_freq4;
     private String path;
     
     public void auto_detect(View button){
     	stop=false;
-    	freq4ornot=false;
-    	
-    	
-    	//1 -if device not supported, send error toast "device not supported" and abort
-    	
-    
-    	
-    	
-    	//2 -get the path string (for multiple device support) that leads to the cpu_freq file
-    		if (stop==false){get_path();}
-    	
-    	//3 -execute ?a shell script? to grab the 3/4 frequencies in that file
-    		// or use cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies | wc -w
-    		
-    		detect();
-    	
-    	//4 -fill the 3/4 freq boxes with the frequencies found
+    	freq4ornot=false; 	   	
+    	//get the path string (for multiple device support) that leads to the cpu_freq file
+    		{get_path();}    	
+    	//read and process the file specified by path() and extract the frequencies    		
+    		detect();    	
+    	//fill the 3/4 freq boxes with the frequencies found
     		write_freq(detected_freq1,detected_freq2,detected_freq3,detected_freq4);
     		
     		if (stop==true){error_device();}
-
     	}
     	
     	private void get_path(){
     		//find path for frequencies available
     		// for Defy (and milestone, and many other android devices) it is /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
-    		// for multiple devices support, probably store the paths in a table
-    		
-    		path="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies";
-    		
-    		
+    		// for multiple devices support, probably store the paths in a table in the future    		
+    		path="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies";    		    		
     	}
     	
     	private void detect(){
     		String[] segs;
     		FileReader fstream;
     		long Read;
-
+    		
     	    try {fstream = new FileReader(path);
     	    Log.d("VselCalc_AutoD", "Opened '" + path + "' file correctly");
     		} 
@@ -286,18 +271,12 @@ public class VselcalculatortestActivity extends Activity {
     	        	    show_row4();
     	                }
     	            
-    	        }
-    	         //call function to update textviews or whatever
-    	        return;
+    	        }    	        
     	    } catch (IOException e) {
     	        Log.e("readfile", e.toString());
     	    }
     	    return ;
-    		
-    	}
-    	
-    	
-    	
+    	}    	    	    	
     	
     	public void write_freq(int fr1, int fr2, int fr3, int fr4){
     		if(stop==false){
@@ -306,12 +285,11 @@ public class VselcalculatortestActivity extends Activity {
         		freqbox3.setText(String.valueOf(fr3));
         		if(freq4ornot==true){freqbox4.setText(String.valueOf(fr4));}
         		Toast.makeText(getApplicationContext(), "Auto-Detection successful!", Toast.LENGTH_LONG).show();
-        	}
-    		
+        	}   		
     	}
     	
     	public void error_device(){
-        	Toast.makeText(getApplicationContext(), "Function may not be supported on your device. Contact the developers", Toast.LENGTH_LONG).show();
+        	Toast.makeText(getApplicationContext(), "Function may not be supported on your device. Please contact the developers", Toast.LENGTH_LONG).show();
     	}
     	
     	
