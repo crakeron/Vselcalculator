@@ -7,11 +7,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import com.actionbarsherlock.app.SherlockActivity;
+
 import crakeron.vsel.calctest.R;
 
 
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,7 +22,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class VselcalculatortestActivity extends Activity {
+public class VselcalculatortestActivity extends SherlockActivity {
 	private EditText freqbox1;
 	private EditText freqbox2;
 	private EditText freqbox3;
