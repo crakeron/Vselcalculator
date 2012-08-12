@@ -19,6 +19,16 @@
     </style>
   </head>
   <body>
+$ 0.9.7
+  %Version 0.9.7
+  _12/08/2012
+  *Actionbar!!
+  *Added Help button in actionbar (not yet functional)
+  *Added Changelog button in actionbar (functional)
+  *Added Credits button in actionbar (not yet functional)
+  *Fixed landscape layout for GB and Froyo devices (4th row being out of screen)
+ $ END_OF_CHANGE_LOG 
+   
 $ 0.9.6
   %Version 0.9.6
   _ 11-08-2012
@@ -27,7 +37,7 @@ $ 0.9.6
   *Added Logs for debugging/testing
   *new functions to simplify actions
   *testing for action bar
- $ END_OF_CHANGE_LOG 
+
 
 $ 0.9.4.1
   %Version 0.9.4.1

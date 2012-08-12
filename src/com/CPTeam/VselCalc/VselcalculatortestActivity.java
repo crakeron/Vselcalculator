@@ -7,7 +7,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
 import crakeron.vsel.calctest.R;
 
@@ -53,6 +57,11 @@ public class VselcalculatortestActivity extends SherlockActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        ActionBar actionBar = getSupportActionBar();
+        //could be used to modify actionbar if needed
+        
+        
+        
         ChangeLog cl = new ChangeLog(this);
         if (cl.firstRun())
             cl.getLogDialog().show();
@@ -93,7 +102,42 @@ public class VselcalculatortestActivity extends SherlockActivity {
         			}
         });
     }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getSupportMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
  
+    
+    
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()) {
+        case R.id.Changelog:
+        	new ChangeLog(this).getFullLogDialog().show();;
+            return true;
+            
+        case R.id.Help:
+            //showHelp();
+        // to do
+    	return true;
+    	
+        case R.id.Credits:
+        	//showcredits();
+        	//to do
+        	return true;
+        	
+        
+    	}
+		return true;
+    }
+    
+    
+    
+    
+    
+    
     public void show_row4(){
     	freqbox4.setVisibility(View.VISIBLE);
 		findViewById(R.id.textView8).setVisibility(View.VISIBLE);
