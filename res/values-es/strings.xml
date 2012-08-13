@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="Column1">Freq del CPU</string>
+    <string name="app_name">Calculadora de Vsel</string>
+    <string name="hello">Vista previa de la calc de vsel</string>
+    <string name="arrow">-></string>
+    <string name="calc">¡Calcular!</string>
+    <string name="mhz"> MHz</string>
+    <string name="voltage">Voltaje Recomendado</string>
+    <string name="credits">Créditos al CPTeam: ppero196, crakeron</string>
+    <string name="spinner">Número de frecuencias</string>
+    <string name="welcome">Bienvenido a la Calculadora de Vsel</string>
+    <string name="range"> +/-2</string>
+    <string name="changelog_full_title">Cambios</string>
+    <string name="changelog_title">Nuevo</string>
+    <string name="changelog_ok_button">Aceptar</string>
+    <string name="changelog_show_full">mas...</string>
+    <string name="auto_detect">¡Auto-Detectar!</string>
+    <string name="Help">Ayuda</string>
+    
+    <string-array name="spinner_choices">
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+</resources>

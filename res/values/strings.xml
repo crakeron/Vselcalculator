@@ -8,16 +8,18 @@
     <string name="calc">Calculate!</string>
     <string name="mhz"> MHz</string>
     <string name="voltage">Recommended Voltage</string>
-    <string name="credits">Credits go to CPTeam: ppero196, crakeron</string>
+    <string name="credits">Credits</string>
     <string name="spinner">Number of frequencies</string>
     <string name="welcome">Welcome to Vsel Calculator</string>
     <string name="range"> +/-2</string>
-    <string name="changelog_full_title">Change Log</string>
+    <string name="changelog_full_title">ChangeLog</string>
     <string name="changelog_title">What\'s New</string>
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">more...</string>
     <string name="auto_detect">Auto-Detect!</string>
+    <string name="Help">Help</string>
     
+       
     <string-array name="spinner_choices">
         <item>3</item>
         <item>4</item>

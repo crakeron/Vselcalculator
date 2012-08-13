@@ -2,9 +2,22 @@ package com.CPTeam.VselCalc;
 
 
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+
 import crakeron.vsel.calctest.R;
-import android.app.Activity;
+
+
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,7 +25,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class VselcalculatortestActivity extends Activity {
+public class VselcalculatortestActivity extends SherlockActivity {
 	private EditText freqbox1;
 	private EditText freqbox2;
 	private EditText freqbox3;
@@ -43,6 +56,13 @@ public class VselcalculatortestActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        ActionBar actionBar = getSupportActionBar();
+        //could be used to modify actionbar if needed
+        
+        
+        
+        
+        
         ChangeLog cl = new ChangeLog(this);
         if (cl.firstRun())
             cl.getLogDialog().show();
@@ -70,16 +90,12 @@ public class VselcalculatortestActivity extends Activity {
         			public void onItemSelected(AdapterView <?> adapter, View v, int pos, long lng) {
         				if (pos==0){
         					freq4ornot=false;
-        					freqbox4.setVisibility(View.INVISIBLE);
-        					findViewById(R.id.textView8).setVisibility(View.INVISIBLE);
-        					findViewById(R.id.TextView03).setVisibility(View.INVISIBLE);
-        					voltbox4.setVisibility(View.INVISIBLE);}
+        					hide_row4();
+        					}
         				if (pos==1){
         					freq4ornot=true;
-        					freqbox4.setVisibility(View.VISIBLE);
-        					findViewById(R.id.textView8).setVisibility(View.VISIBLE);
-        					findViewById(R.id.TextView03).setVisibility(View.VISIBLE);
-        					voltbox4.setVisibility(View.VISIBLE);}        				
+        					show_row4();
+        					}        				
         			}
     	  
         			public void onNothingSelected(AdapterView <?> arg0) {
@@ -87,7 +103,58 @@ public class VselcalculatortestActivity extends Activity {
         			}
         });
     }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getSupportMenuInflater();
+        inflater.inflate(R.menu.menu, menu);   
+        return true;
+    }
  
+    
+    
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()) {
+        case R.id.Changelog:
+        	new ChangeLog(this).getFullLogDialog().show();;
+            return true;
+            
+        case R.id.Help:
+            //showHelp();
+        // to do
+    	return true;
+    	
+        case R.id.Credits:
+        	//showcredits();
+        	//to do
+        	return true;
+        	
+        
+    	}
+		return true;
+    }
+    
+    
+    
+    
+    
+    
+    public void show_row4(){
+    	freqbox4.setVisibility(View.VISIBLE);
+		findViewById(R.id.textView8).setVisibility(View.VISIBLE);
+		findViewById(R.id.TextView03).setVisibility(View.VISIBLE);
+		voltbox4.setVisibility(View.VISIBLE);
+		Log.d("VselCalc", "Showing row 4");
+    	
+    }
+    
+    public void hide_row4(){
+    	freqbox4.setVisibility(View.INVISIBLE);
+		findViewById(R.id.textView8).setVisibility(View.INVISIBLE);
+		findViewById(R.id.TextView03).setVisibility(View.INVISIBLE);
+		voltbox4.setVisibility(View.INVISIBLE);
+		Log.d("VselCalc", "Hiding row 4");
+    }
     
     public void button_pressed(View button) { 
     	voltbox1.setText("");
@@ -184,45 +251,82 @@ public class VselcalculatortestActivity extends Activity {
     
                         //AUTODETECTION FUNCTIONS!!!
     
-    private int detected_freq1=300;
-    private int detected_freq2=600;
-    private int detected_freq3=1000;
-    private int detected_freq4=1100;
-    
+    private int detected_freq1;
+    private int detected_freq2;
+    private int detected_freq3;
+    private int detected_freq4;
+    private String path;
     
     public void auto_detect(View button){
     	stop=false;
-    	
-    	
-    	//1 -if device not supported, send error toast "device not supported" and abort
-    	
-    	if(!android.os.Build.MODEL.equals("MB525")){stop=true;}
-    	
-    	
-    	//2 -get the path string (for multiple device support) that leads to the cpu_freq file
-    		if (stop==false){get_path();}
-    	
-    	//3 -execute ?a shell script? to grab the 3/4 frequencies in that file
-    		// or use cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies | wc -w
-    	
-    	//4 -fill the 3/4 freq boxes with the frequencies found
-    		if (stop==false){write_freq(detected_freq1,detected_freq2,detected_freq3,detected_freq4);}
+    	freq4ornot=false; 	   	
+    	//get the path string (for multiple device support) that leads to the cpu_freq file
+    		{get_path();}    	
+    	//read and process the file specified by path() and extract the frequencies    		
+    		detect();    	
+    	//fill the 3/4 freq boxes with the frequencies found
+    		write_freq(detected_freq1,detected_freq2,detected_freq3,detected_freq4);
     		
     		if (stop==true){error_device();}
-
     	}
     	
     	private void get_path(){
     		//find path for frequencies available
-    		// for Defy (and milestone etc) it is /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
-    		// for multiple devices, probably store the paths in a table
-    		
-    		//path="the_path_found";
+    		// for Defy (and milestone, and many other android devices) it is /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
+    		// for multiple devices support, probably store the paths in a table in the future    		
+    		path="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies";    		    		
     	}
     	
-    	
-    	
-    	
+    	private void detect(){
+    		String[] segs;
+    		FileReader fstream;
+    		long Read;
+    		
+    	    try {fstream = new FileReader(path);
+    	    Log.d("VselCalc_AutoD", "Opened '" + path + "' file correctly");
+    		} 
+    		catch (FileNotFoundException e) {   	        
+    	        Toast.makeText(getApplicationContext(), "Could not read " + path, Toast.LENGTH_LONG).show();
+    	        stop=true;
+    	        return;
+    	    }
+    	    
+    	    BufferedReader in = new BufferedReader(fstream, 500);
+    	    String line;
+    	    try {
+    	        while ((line = in.readLine()) != null) {
+    	            
+    	        		Log.d("VselCalc_AutoD", "line read:"+  line);
+    	                segs = line.trim().split(" ");
+    	                Log.d("VselCalc_AutoD", "segs length: " + segs.length);
+    	                Read = Long.parseLong(segs[0]);
+    	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read1: " + Read);  
+    	                detected_freq1= (int) Read/1000;
+    	                Read = Long.parseLong(segs[1]);
+    	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read2: " + Read);
+    	                detected_freq2= (int) Read/1000;
+    	                Read = Long.parseLong(segs[2]);
+    	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read3: " + Read);
+    	                detected_freq3= (int) Read/1000;
+    	                Log.d("VselCalc_AutoD", "freq4 or not: " + freq4ornot);
+    	                hide_row4();
+    	                spinner.setSelection(0);
+    	                if(segs.length==4){
+    	                Read = Long.parseLong(segs[3]);
+    	                Log.d("VselCalc_AutoD", "Freq4 exists. Auto-Detect freq. Read4: " + Read);
+    	                detected_freq4= (int) Read/1000;
+    	        	    freq4ornot=true;
+    	        	    spinner.setSelection(1);
+    	        	    Log.d("VselCalc_AutoD", "freq4ornot changed to true after auto-detect");
+    	        	    show_row4();
+    	                }
+    	            
+    	        }    	        
+    	    } catch (IOException e) {
+    	        Log.e("readfile", e.toString());
+    	    }
+    	    return ;
+    	}    	    	    	
     	
     	public void write_freq(int fr1, int fr2, int fr3, int fr4){
     		if(stop==false){
@@ -230,12 +334,12 @@ public class VselcalculatortestActivity extends Activity {
         		freqbox2.setText(String.valueOf(fr2));
         		freqbox3.setText(String.valueOf(fr3));
         		if(freq4ornot==true){freqbox4.setText(String.valueOf(fr4));}
-        	}
-    		
+        		Toast.makeText(getApplicationContext(), "Auto-Detection successful!", Toast.LENGTH_LONG).show();
+        	}   		
     	}
     	
     	public void error_device(){
-        	Toast.makeText(getApplicationContext(), "Function not supported on your device. Contact the developers", Toast.LENGTH_LONG).show();
+        	Toast.makeText(getApplicationContext(), "Function may not be supported on your device. Please contact the developers", Toast.LENGTH_LONG).show();
     	}
     	
     	

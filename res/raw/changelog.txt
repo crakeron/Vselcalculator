@@ -19,14 +19,43 @@
     </style>
   </head>
   <body>
-  $ 0.9.4.1
+$ 0.9.8
+  %Version 0.9.8
+  _13/08/2012
+  *Forced the action overflow button
+  *Fixed layout for Croatian for Froyo and GB devices 
+  *Updated translations
+  *Fixed German landscape layout (i hope so xD)
+ $ END_OF_CHANGE_LOG 
+  
+$ 0.9.7
+  %Version 0.9.7
+  _12/08/2012
+  *Actionbar!!
+  *Added Help button in actionbar (not yet functional)
+  *Added Changelog button in actionbar (functional)
+  *Added Credits button in actionbar (not yet functional)
+  *Fixed landscape layout for GB and Froyo devices (4th row being out of screen)
+ 
+   
+$ 0.9.6
+  %Version 0.9.6
+  _ 11-08-2012
+  *Autodetection!
+  *Autodetection improved
+  *Added Logs for debugging/testing
+  *new functions to simplify actions
+  *testing for action bar
+
+
+$ 0.9.4.1
   %Version 0.9.4.1
   _ 10-08-2012
   *Redesigned icon
   
-$ END_OF_CHANGE_LOG  
 
-  $ 0.9.4
+
+$ 0.9.4
   %Version 0.9.4
   _ 09-08-2012
   *Fixed changelog colours (part 2)
@@ -35,7 +64,7 @@ $ END_OF_CHANGE_LOG
   *Added Auto-detect button, allthough it is not functionnal yet
   *Changed the package name
   
-$ END_OF_CHANGE_LOG  
+ 
 
 $ 0.9.3
   % Version 0.9.3
