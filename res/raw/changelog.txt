@@ -23,6 +23,9 @@ $ 0.9.8
   %Version 0.9.8
   _13/08/2012
   *Forced the action overflow button
+  *Fixed layout for Croatian for Froyo and GB devices 
+  *Updated translations
+  *Fixed German landscape layout (i hope so xD)
  $ END_OF_CHANGE_LOG 
   
 $ 0.9.7
