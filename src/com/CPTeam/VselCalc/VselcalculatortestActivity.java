@@ -310,11 +310,13 @@ public class VselcalculatortestActivity extends SherlockActivity {
     	                detected_freq3= (int) Read/1000;
     	                Log.d("VselCalc_AutoD", "freq4 or not: " + freq4ornot);
     	                hide_row4();
+    	                spinner.setSelection(0);
     	                if(segs.length==4){
     	                Read = Long.parseLong(segs[3]);
     	                Log.d("VselCalc_AutoD", "Freq4 exists. Auto-Detect freq. Read4: " + Read);
     	                detected_freq4= (int) Read/1000;
     	        	    freq4ornot=true;
+    	        	    spinner.setSelection(1);
     	        	    Log.d("VselCalc_AutoD", "freq4ornot changed to true after auto-detect");
     	        	    show_row4();
     	                }
