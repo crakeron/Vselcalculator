@@ -19,6 +19,12 @@
     </style>
   </head>
   <body>
+$ 0.9.8
+  %Version 0.9.8
+  _13/08/2012
+  *Forced the action overflow button
+ $ END_OF_CHANGE_LOG 
+  
 $ 0.9.7
   %Version 0.9.7
   _12/08/2012
@@ -27,7 +33,7 @@ $ 0.9.7
   *Added Changelog button in actionbar (functional)
   *Added Credits button in actionbar (not yet functional)
   *Fixed landscape layout for GB and Froyo devices (4th row being out of screen)
- $ END_OF_CHANGE_LOG 
+ 
    
 $ 0.9.6
   %Version 0.9.6

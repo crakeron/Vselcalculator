@@ -12,7 +12,7 @@
     <string name="spinner">Anzahl der Frequenzen</string>
     <string name="welcome">Willkommen beim Vsel Rechner</string>
     <string name="range"> +/-2</string>
-    <string name="changelog_full_title">Änderungsprotokoll</string>
+    <string name="changelog_full_title">Changelog</string>
     <string name="changelog_title">Was ist neu</string>
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">mehr...</string>
