@@ -17,6 +17,7 @@
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">mehr...</string>
     <string name="auto_detect">Auto-Erkennung!</string>
+    <string name="Help">Helfen</string>
     
     <string-array name="spinner_choices">
         <item>3</item>
