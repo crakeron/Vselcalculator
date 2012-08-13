@@ -30,24 +30,23 @@
                 android:onClick="button_pressed"
                 android:text="@string/calc" />
 
-            <Spinner
-                android:id="@+id/spinner1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="23dp"
-                android:layout_toLeftOf="@+id/Button01" />
-
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/detect"
                 android:layout_alignBottom="@+id/detect"
-                android:layout_marginRight="26dp"
-                android:layout_toLeftOf="@+id/spinner1"
+                android:layout_toRightOf="@+id/detect"
                 android:text="@string/spinner"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/Button01" />
 
         </RelativeLayout>
 
@@ -58,9 +57,9 @@
         android:layout_height="210dp"
         android:layout_weight="0.00"
         android:orientation="vertical" >
-
+
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="451dp"
             android:layout_height="wrap_content" >
 
             <TextView
@@ -69,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="41dp"
+                android:layout_marginLeft="23dp"
                 android:text="@string/Column1"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -77,10 +76,12 @@
                 android:id="@+id/column2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@+id/column1"
                 android:text="@string/voltage"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
+
         </RelativeLayout>
 
         <LinearLayout

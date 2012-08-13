@@ -786,14 +786,17 @@ containing a value of this type.
         public static final int abs__tab_selected_holo=0x7f020052;
         public static final int abs__tab_selected_pressed_holo=0x7f020053;
         public static final int abs__tab_unselected_pressed_holo=0x7f020054;
-        public static final int launcher_icon=0x7f020055;
+        public static final int ic_launcher=0x7f020055;
+        public static final int launcher_icon=0x7f020056;
     }
     public static final class id {
-        public static final int Button01=0x7f05003f;
+        public static final int Button01=0x7f05003e;
+        public static final int Changelog=0x7f050040;
+        public static final int Credits=0x7f050041;
+        public static final int Help=0x7f05003f;
         public static final int TextView01=0x7f050033;
         public static final int TextView02=0x7f050037;
         public static final int TextView03=0x7f05003b;
-        public static final int TextView04=0x7f050040;
         public static final int Title=0x7f050027;
         public static final int abs__action_bar=0x7f050022;
         public static final int abs__action_bar_container=0x7f050021;
@@ -825,9 +828,8 @@ containing a value of this type.
         public static final int abs__titleDivider=0x7f05001c;
         public static final int abs__up=0x7f05000b;
         public static final int calc=0x7f05003d;
-        public static final int column1=0x7f05002a;
-        public static final int column2=0x7f05002b;
-        public static final int credits=0x7f05003e;
+        public static final int column1=0x7f05002b;
+        public static final int column2=0x7f05002a;
         public static final int detect=0x7f05003c;
         public static final int disableHome=0x7f050009;
         public static final int freq1=0x7f05002d;
@@ -883,11 +885,15 @@ containing a value of this type.
         public static final int sherlock_spinner_dropdown_item=0x7f030015;
         public static final int sherlock_spinner_item=0x7f030016;
     }
+    public static final class menu {
+        public static final int menu=0x7f0d0000;
+    }
     public static final class raw {
         public static final int changelog=0x7f040000;
     }
     public static final class string {
         public static final int Column1=0x7f0a000a;
+        public static final int Help=0x7f0a001a;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f0a0000;
