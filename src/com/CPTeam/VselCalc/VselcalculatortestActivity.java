@@ -51,10 +51,14 @@ public class VselcalculatortestActivity extends SherlockActivity {
     //public String path;
 	
     /** Called when the activity is first created. */
+    
+    private AutoUpdateApk aua;  
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
+        aua = new AutoUpdateApk(getApplicationContext()); 
         
         ActionBar actionBar = getSupportActionBar();
         //could be used to modify actionbar if needed
