@@ -19,12 +19,23 @@
     </style>
   </head>
   <body>
+  $ 0.9.9 rev 5
+  %Version 0.9.9 rev 5
+  _16/08/2012
+  *Added 5th vsel for Milestone users
+  *Added Hungarian translation thanks to zakoo2
+  *Layout is screwed thanks to 5th vsel. Got to fix it ASAP!
+  *All other things that i forgot :D
+ $ END_OF_CHANGE_LOG 
+ 
+ 
+ 
   $ 0.9.9
   %Version 0.9.9
   _14/08/2012
   *Added autoupdate
   *Fixed German translation
- $ END_OF_CHANGE_LOG 
+ 
  
  
  
