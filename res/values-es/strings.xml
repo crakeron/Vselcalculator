@@ -8,7 +8,7 @@
     <string name="calc">¡Calcular!</string>
     <string name="mhz"> MHz</string>
     <string name="voltage">Voltaje Recomendado</string>
-    <string name="credits">Créditos al CPTeam: ppero196, crakeron</string>
+    <string name="credits">Créditos</string>
     <string name="spinner">Número de frecuencias</string>
     <string name="welcome">Bienvenido a la Calculadora de Vsel</string>
     <string name="range"> +/-2</string>

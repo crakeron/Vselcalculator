@@ -8,7 +8,7 @@
     <string name="calc">Berechne!</string>
     <string name="mhz"> MHz</string>
     <string name="voltage">benötigte Spannung</string>
-    <string name="credits">Herrausgegeben vom CPTeam: ppero196, crakeron</string>
+    <string name="credits">Credits</string>
     <string name="spinner">Anzahl der Frequenzen</string>
     <string name="welcome">Willkommen beim Vsel Rechner</string>
     <string name="range"> +/-2</string>
