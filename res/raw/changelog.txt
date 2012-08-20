@@ -19,6 +19,16 @@
     </style>
   </head>
   <body>
+  
+  $ 0.9.9 rev 6
+  %Version 0.9.9 rev 6
+  _20/08/2012
+  *Fixed Spinner for 5th freq
+  *Fixed portrait layout for 5th freq
+  *Fixed auto-detection for >4 frequencies
+  
+ $ END_OF_CHANGE_LOG 
+  
   $ 0.9.9 rev 5
   %Version 0.9.9 rev 5
   _16/08/2012
@@ -26,7 +36,7 @@
   *Added Hungarian translation thanks to zakoo2
   *Layout is screwed thanks to 5th vsel. Got to fix it ASAP!
   *All other things that i forgot :D
- $ END_OF_CHANGE_LOG 
+
  
  
  
