@@ -327,7 +327,10 @@ public class VselcalculatortestActivity extends SherlockActivity {
     		//find path for frequencies available
     		// for Defy (and milestone, and many other android devices) it is /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
     		// for multiple devices support, probably store the paths in a table in the future    		
-    		path="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies";    		    		
+    		//path="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies";
+    		
+    		//for testing, put a file called "Test" in the root directory of your phone to test behavior on 4/5 freqs
+    		path="/Test";
     	}
     	
     	private void detect(){
@@ -352,39 +355,46 @@ public class VselcalculatortestActivity extends SherlockActivity {
     	        		Log.d("VselCalc_AutoD", "line read:"+  line);
     	                segs = line.trim().split(" ");
     	                Log.d("VselCalc_AutoD", "segs length: " + segs.length);
+    	                
     	                Read = Long.parseLong(segs[0]);
     	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read1: " + Read);  
     	                detected_freq1= (int) Read/1000;
+    	                
     	                Read = Long.parseLong(segs[1]);
     	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read2: " + Read);
     	                detected_freq2= (int) Read/1000;
+    	                
     	                Read = Long.parseLong(segs[2]);
     	                Log.d("VselCalc_AutoD", "Auto-Detect freq. Read3: " + Read);
     	                detected_freq3= (int) Read/1000;
-    	                Log.d("VselCalc_AutoD", "freq4 or not: " + freq4ornot);
+    	                
     	                hide_row4();
+    	                hide_row5();
     	                spinner.setSelection(0);
-    	                if(segs.length==4){
+    	                
+    	                if(segs.length>=4){
     	                Read = Long.parseLong(segs[3]);
     	                Log.d("VselCalc_AutoD", "Freq4 exists. Auto-Detect freq. Read4: " + Read);
     	                detected_freq4= (int) Read/1000;
     	        	    freq4ornot=true;
     	        	    spinner.setSelection(1);
     	        	    Log.d("VselCalc_AutoD", "freq4ornot changed to true after auto-detect");
-    	        	    show_row4();
     	        	    Log.d("VselCalc_AutoD", "freq5 or not: " + freq5ornot);
+    	        	    show_row4();
     	                hide_row5();
-    	                spinner.setSelection(0);
-    	                if(segs.length==4){
-    	                Read = Long.parseLong(segs[3]);
+    	                }
+    	                
+    	                if(segs.length>=5){
+    	                Read = Long.parseLong(segs[4]);
     	                Log.d("VselCalc_AutoD", "Freq5 exists. Auto-Detect freq. Read5: " + Read);
     	                detected_freq5= (int) Read/1000;
     	        	    freq5ornot=true;
-    	        	    spinner.setSelection(1);
+    	        	    spinner.setSelection(2);
     	        	    Log.d("VselCalc_AutoD", "freq5ornot changed to true after auto-detect");
+    	        	    show_row4();
     	        	    show_row5();
     	                }
-    	                }
+    	                
     	            
     	        }    	        
     	    } catch (IOException e) {
