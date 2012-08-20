@@ -42,10 +42,10 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </RelativeLayout>
     </LinearLayout>
-
+
     <LinearLayout
         android:layout_width="320dp"
-        android:layout_height="210dp"
+        android:layout_height="wrap_content"
         android:layout_weight="0.00"
         android:orientation="vertical" >
 
@@ -341,34 +341,37 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </RelativeLayout>
         </LinearLayout>
-
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="0.00"
             android:orientation="vertical" >
-
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/detect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="34dp"
+                    android:onClick="auto_detect"
+                    android:text="@string/auto_detect" />
+
+                <Button
+                    android:id="@+id/calc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp"
+                    android:onClick="button_pressed"
+                    android:text="@string/calc" />
+
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/calc"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginRight="34dp"
-        android:onClick="button_pressed"
-        android:text="@string/calc" />
-
-    <Button
-        android:id="@+id/detect"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginLeft="34dp"
-        android:onClick="auto_detect"
-        android:text="@string/auto_detect" />
     
 </LinearLayout>
