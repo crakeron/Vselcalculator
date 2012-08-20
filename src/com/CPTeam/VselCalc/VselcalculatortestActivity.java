@@ -327,10 +327,10 @@ public class VselcalculatortestActivity extends SherlockActivity {
     		//find path for frequencies available
     		// for Defy (and milestone, and many other android devices) it is /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
     		// for multiple devices support, probably store the paths in a table in the future    		
-    		//path="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies";
+    		path="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies";
     		
     		//for testing, put a file called "Test" in the root directory of your phone to test behavior on 4/5 freqs
-    		path="/Test";
+    		//path="/Test";
     	}
     	
     	private void detect(){
