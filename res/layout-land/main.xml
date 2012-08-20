@@ -51,9 +51,12 @@
         </RelativeLayout>
 
     </LinearLayout>
-
+<ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
     <LinearLayout
-        android:layout_width="320dp"
+        android:layout_width="340dp"
         android:layout_height="210dp"
         android:layout_weight="0.00"
         android:orientation="vertical"
@@ -357,6 +360,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
+    </ScrollView>
 
 </LinearLayout>
