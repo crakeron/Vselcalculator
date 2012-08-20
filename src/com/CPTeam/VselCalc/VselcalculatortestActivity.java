@@ -101,18 +101,20 @@ public class VselcalculatortestActivity extends SherlockActivity {
         			public void onItemSelected(AdapterView <?> adapter, View v, int pos, long lng) {
         				if (pos==0){
         					freq4ornot=false;
-        					hide_row4();
-        					}
-        				if (pos==1){
-        					freq4ornot=true;
-        					show_row4();
-        					}   
-                        if (pos==0){
         					freq5ornot=false;
+        					hide_row4();
         					hide_row5();
         					}
         				if (pos==1){
+        					freq4ornot=true;
+        					freq5ornot=false;
+        					show_row4();
+        					hide_row5();
+        					}   
+                        if (pos==2){
+                        	freq4ornot=true;
         					freq5ornot=true;
+        					show_row4();
         					show_row5();
         					}
         			}
