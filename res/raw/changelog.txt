@@ -26,6 +26,7 @@
   *Fixed Spinner for 5th freq
   *Fixed portrait layout for 5th freq
   *Fixed auto-detection for >4 frequencies
+  *Made the landscape layout scrollable
   
  $ END_OF_CHANGE_LOG 
   
