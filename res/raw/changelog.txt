@@ -20,6 +20,17 @@
   </head>
   <body>
   
+   $ 1.0
+  %Version 1.0
+  _21/08/2012
+  *Credits option has info and data now
+  *Help option has info and data now
+  *Added French translation
+  *Fixed translations for other languages!
+  *WE ARE OUT OF BETA!
+  
+ $ END_OF_CHANGE_LOG
+ 
   $ 0.9.9 rev 6
   %Version 0.9.9 rev 6
   _20/08/2012
@@ -28,7 +39,7 @@
   *Fixed auto-detection for >4 frequencies
   *Made the landscape layout scrollable
   
- $ END_OF_CHANGE_LOG 
+   
   
   $ 0.9.9 rev 5
   %Version 0.9.9 rev 5
