@@ -894,6 +894,8 @@ containing a value of this type.
     }
     public static final class raw {
         public static final int changelog=0x7f040000;
+        public static final int credits=0x7f040001;
+        public static final int help=0x7f040002;
     }
     public static final class string {
         public static final int Column1=0x7f0a000a;

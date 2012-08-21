@@ -19,6 +19,7 @@ import crakeron.vsel.calctest.R;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -141,13 +142,15 @@ public class VselcalculatortestActivity extends SherlockActivity {
             return true;
             
         case R.id.Help:
-            //showHelp();
-        // to do
+        	WebView webview = new WebView(this);
+        	 setContentView(webview);
+        	 webview.loadUrl("file:///android_res/raw/help.html");  
     	return true;
     	
         case R.id.Credits:
-        	//showcredits();
-        	//to do
+            WebView webview1 = new WebView(this);
+       	 setContentView(webview1);
+       	webview1.loadUrl("file:///android_res/raw/credits.html"); 
         	return true;
         	
         
