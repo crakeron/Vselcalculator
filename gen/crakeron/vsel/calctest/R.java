@@ -794,6 +794,7 @@ containing a value of this type.
         public static final int Changelog=0x7f050044;
         public static final int Credits=0x7f050045;
         public static final int Help=0x7f050043;
+        public static final int Home=0x7f050046;
         public static final int TextView01=0x7f050033;
         public static final int TextView02=0x7f050037;
         public static final int TextView03=0x7f05003b;
@@ -828,10 +829,10 @@ containing a value of this type.
         public static final int abs__title=0x7f05001b;
         public static final int abs__titleDivider=0x7f05001c;
         public static final int abs__up=0x7f05000b;
-        public static final int calc=0x7f050040;
+        public static final int calc=0x7f050041;
         public static final int column1=0x7f05002b;
         public static final int column2=0x7f05002a;
-        public static final int detect=0x7f050041;
+        public static final int detect=0x7f050040;
         public static final int disableHome=0x7f050009;
         public static final int freq1=0x7f05002d;
         public static final int freq2=0x7f050030;
@@ -940,6 +941,7 @@ containing a value of this type.
         public static final int changelog_title=0x7f0a0016;
         public static final int credits=0x7f0a0011;
         public static final int hello=0x7f0a000c;
+        public static final int home=0x7f0a001b;
         public static final int mhz=0x7f0a000f;
         public static final int range=0x7f0a0014;
         public static final int spinner=0x7f0a0012;

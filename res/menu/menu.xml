@@ -15,5 +15,10 @@
           android:showAsAction="ifRoom"
           ></item>
     
+    <item android:id="@+id/Home" 
+          android:title='@string/home'
+          android:showAsAction="ifRoom"
+          ></item>
+    
 
 </menu>

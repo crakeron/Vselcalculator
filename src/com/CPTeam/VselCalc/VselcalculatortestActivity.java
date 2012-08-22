@@ -16,6 +16,7 @@ import crakeron.vsel.calctest.R;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -57,8 +58,8 @@ public class VselcalculatortestActivity extends SherlockActivity {
     //public String path;
 	
     /** Called when the activity is first created. */
-    
-    private AutoUpdateApk aua;  
+
+	private AutoUpdateApk aua;  
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -152,6 +153,12 @@ public class VselcalculatortestActivity extends SherlockActivity {
        	 setContentView(webview1);
        	webview1.loadUrl("file:///android_res/raw/credits.html"); 
         	return true;
+        	
+        case R.id.Home:
+        	Intent intent = new Intent(this, VselcalculatortestActivity.class);            
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+            startActivity(intent);  
+        	return true;	
         	
         
     	}
