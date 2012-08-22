@@ -19,6 +19,48 @@
     </style>
   </head>
   <body>
+  
+   $ 1.0
+  %Version 1.0
+  _21/08/2012
+  *Credits option has info and data now
+  *Help option has info and data now
+  *Added French translation
+  *Fixed translations for other languages!
+  *WE ARE OUT OF BETA!
+  
+ $ END_OF_CHANGE_LOG
+ 
+  $ 0.9.9 rev 6
+  %Version 0.9.9 rev 6
+  _20/08/2012
+  *Fixed Spinner for 5th freq
+  *Fixed portrait layout for 5th freq
+  *Fixed auto-detection for >4 frequencies
+  *Made the landscape layout scrollable
+  
+   
+  
+  $ 0.9.9 rev 5
+  %Version 0.9.9 rev 5
+  _16/08/2012
+  *Added 5th vsel for Milestone users
+  *Added Hungarian translation thanks to zakoo2
+  *Layout is screwed thanks to 5th vsel. Got to fix it ASAP!
+  *All other things that i forgot :D
+
+ 
+ 
+ 
+  $ 0.9.9
+  %Version 0.9.9
+  _14/08/2012
+  *Added autoupdate
+  *Fixed German translation
+ 
+ 
+ 
+ 
 $ 0.9.8
   %Version 0.9.8
   _13/08/2012
@@ -26,8 +68,9 @@ $ 0.9.8
   *Fixed layout for Croatian for Froyo and GB devices 
   *Updated translations
   *Fixed German landscape layout (i hope so xD)
- $ END_OF_CHANGE_LOG 
-  
+
+
+
 $ 0.9.7
   %Version 0.9.7
   _12/08/2012

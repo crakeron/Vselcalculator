@@ -1,5 +1,7 @@
 package crakeron.vsel.calctest;
 
+import com.CPTeam.VselCalc.AutoUpdateApk;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;

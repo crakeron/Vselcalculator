@@ -8,7 +8,7 @@
     <string name="calc">Izračunaj!</string>
     <string name="mhz"> MHz</string>
     <string name="voltage">Preporučeni napon</string>
-    <string name="credits">Pohvale CPTeamu: ppero196, crakeron</string>
+    <string name="credits">Pohvale</string>
     <string name="spinner">Broj frekvencija</string>
     <string name="welcome">Dobrodošli u Vsel Kalkulator</string>
     <string name="range"> +/-2</string>
@@ -22,6 +22,7 @@
     <string-array name="spinner_choices">
         <item>3</item>
         <item>4</item>
+        <item>5</item>
     </string-array>
 
 </resources>

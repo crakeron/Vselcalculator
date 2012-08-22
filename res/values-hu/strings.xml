@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="Column1">CPU frekvencia</string>
+    <string name="app_name">Vsel Számító</string>
+    <string name="hello">Elrendezési előnézet</string>
+    <string name="arrow">-></string>
+    <string name="calc">Számítsd!</string>
+    <string name="mhz"> MHz</string>
+    <string name="voltage">Ajánlott feszültség</string>
+    <string name="credits">Kredit</string>
+    <string name="spinner">Frekvenciák száma</string>
+    <string name="welcome">Üdvözlünk a Vsel Számítóban!</string>
+    <string name="range"> +/-2</string>
+    <string name="changelog_full_title">Változások</string>
+    <string name="changelog_title">Újdonságok</string>
+    <string name="changelog_ok_button">OK</string>
+    <string name="changelog_show_full">tovább...</string>
+    <string name="auto_detect">Auto-Észlelés!</string>
+    <string name="Help">Segítség</string>
+    
+       
+    <string-array name="spinner_choices">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+</resources>

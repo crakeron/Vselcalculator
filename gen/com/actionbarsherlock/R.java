@@ -790,13 +790,14 @@ containing a value of this type.
         public static final int launcher_icon=0x7f020056;
     }
     public static final class id {
-        public static final int Button01=0x7f05003e;
-        public static final int Changelog=0x7f050040;
-        public static final int Credits=0x7f050041;
-        public static final int Help=0x7f05003f;
+        public static final int Button01=0x7f050042;
+        public static final int Changelog=0x7f050044;
+        public static final int Credits=0x7f050045;
+        public static final int Help=0x7f050043;
         public static final int TextView01=0x7f050033;
         public static final int TextView02=0x7f050037;
         public static final int TextView03=0x7f05003b;
+        public static final int TextView04=0x7f05003f;
         public static final int Title=0x7f050027;
         public static final int abs__action_bar=0x7f050022;
         public static final int abs__action_bar_container=0x7f050021;
@@ -827,15 +828,16 @@ containing a value of this type.
         public static final int abs__title=0x7f05001b;
         public static final int abs__titleDivider=0x7f05001c;
         public static final int abs__up=0x7f05000b;
-        public static final int calc=0x7f05003d;
+        public static final int calc=0x7f050040;
         public static final int column1=0x7f05002b;
         public static final int column2=0x7f05002a;
-        public static final int detect=0x7f05003c;
+        public static final int detect=0x7f050041;
         public static final int disableHome=0x7f050009;
         public static final int freq1=0x7f05002d;
         public static final int freq2=0x7f050030;
         public static final int freq3=0x7f050034;
         public static final int freq4=0x7f050038;
+        public static final int freq5=0x7f05003c;
         public static final int homeAsUp=0x7f050006;
         public static final int listMode=0x7f050002;
         public static final int normal=0x7f050001;
@@ -850,11 +852,13 @@ containing a value of this type.
         public static final int textView6=0x7f050032;
         public static final int textView7=0x7f050035;
         public static final int textView8=0x7f05003a;
+        public static final int textView9=0x7f05003e;
         public static final int useLogo=0x7f050004;
         public static final int volt1=0x7f05002c;
         public static final int volt2=0x7f050031;
         public static final int volt3=0x7f050036;
         public static final int volt4=0x7f050039;
+        public static final int volt5=0x7f05003d;
         public static final int wrap_content=0x7f050000;
     }
     public static final class integer {
@@ -890,6 +894,8 @@ containing a value of this type.
     }
     public static final class raw {
         public static final int changelog=0x7f040000;
+        public static final int credits=0x7f040001;
+        public static final int help=0x7f040002;
     }
     public static final class string {
         public static final int Column1=0x7f0a000a;
