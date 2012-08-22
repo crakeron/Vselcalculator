@@ -18,6 +18,7 @@
     <string name="changelog_show_full">more...</string>
     <string name="auto_detect">Auto-Detect!</string>
     <string name="Help">Help</string>
+    <string name="home">Home</string>
     
        
     <string-array name="spinner_choices">
