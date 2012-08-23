@@ -22,14 +22,6 @@
                 android:onClick="auto_detect"
                 android:text="@string/auto_detect" />
 
-            <Button
-                android:id="@+id/Button01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:onClick="button_pressed"
-                android:text="@string/calc" />
-
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
@@ -39,14 +31,22 @@
                 android:layout_toRightOf="@+id/detect"
                 android:text="@string/spinner"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
+
             <Spinner
                 android:id="@+id/spinner1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView2"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textView2" />
+
+            <Button
+                android:id="@+id/Button01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@+id/Button01" />
+                android:onClick="button_pressed"
+                android:text="@string/calc" />
 
         </RelativeLayout>
 
