@@ -351,24 +351,22 @@
                 android:layout_height="match_parent" >
 
                 <Button
-                    android:id="@+id/calc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="24dp"
-                    android:onClick="button_pressed"
-                    android:text="@string/calc" />
-
-                <Button
                     android:id="@+id/detect"
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="22dp"
                     android:onClick="auto_detect"
                     android:text="@string/auto_detect" />
+
+                <Button
+                    android:id="@+id/calc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:onClick="button_pressed"
+                    android:text="@string/calc" />
 
             </RelativeLayout>
 

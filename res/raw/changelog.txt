@@ -20,6 +20,18 @@
   </head>
   <body>
   
+  $ 1.1
+  %Version 1.1
+  _22/08/2012
+  *Fixed retry to Home from Help or Credits
+  *To go Home, press menu button and click home
+  *Fixed French translation layout!
+  *Added new string in strings.xml!
+  *Please update translations (i did the Croatian one)!
+  *Added translators to Credits! You guys deserve it!
+  
+ $ END_OF_CHANGE_LOG
+ 
    $ 1.0
   %Version 1.0
   _21/08/2012
@@ -29,7 +41,7 @@
   *Fixed translations for other languages!
   *WE ARE OUT OF BETA!
   
- $ END_OF_CHANGE_LOG
+ 
  
   $ 0.9.9 rev 6
   %Version 0.9.9 rev 6
