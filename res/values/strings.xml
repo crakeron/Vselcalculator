@@ -2,23 +2,23 @@
 <resources>
 
     <string name="Column1">CPU freq</string>
-    <string name="app_name">Vsel Calculator</string>
-    <string name="hello">Layout preview for vsel calc</string>
+    <string name="app_name">Calculadora de Vsel</string>
+    <string name="hello">Hola!</string>
     <string name="arrow">-></string>
-    <string name="calc">Calculate!</string>
+    <string name="calc">Calcular!</string>
     <string name="mhz"> MHz</string>
-    <string name="voltage">Recommended Voltage</string>
-    <string name="credits">Credits</string>
-    <string name="spinner">Number of frequencies</string>
-    <string name="welcome">Welcome to Vsel Calculator</string>
+    <string name="voltage">Voltage Recomendado</string>
+    <string name="credits">Creditos</string>
+    <string name="spinner">Numero de frecuencias</string>
+    <string name="welcome">Bienvenido a Calculadora de Vsel</string>
     <string name="range"> +/-2</string>
     <string name="changelog_full_title">ChangeLog</string>
-    <string name="changelog_title">What\'s New</string>
+    <string name="changelog_title">Lo Nuevo</string>
     <string name="changelog_ok_button">OK</string>
-    <string name="changelog_show_full">more...</string>
-    <string name="auto_detect">Auto-Detect!</string>
-    <string name="Help">Help</string>
-    <string name="home">Home</string>
+    <string name="changelog_show_full">mas...</string>
+    <string name="auto_detect">Auto-Detectar!</string>
+    <string name="Help">Ayuda</string>
+    <string name="home">Inicio</string>
     
        
     <string-array name="spinner_choices">
