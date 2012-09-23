@@ -20,6 +20,13 @@
   </head>
   <body>
   
+  $1.1.1
+  %Version 1.1.1
+  _21/09/2012
+  *Added a few translated ressources (french, raw-fr)
+  
+  $ END_OF_CHANGE_LOG
+  
   $ 1.1
   %Version 1.1
   _22/08/2012
@@ -30,7 +37,7 @@
   *Please update translations (i did the Croatian one)!
   *Added translators to Credits! You guys deserve it!
   
- $ END_OF_CHANGE_LOG
+
  
    $ 1.0
   %Version 1.0
